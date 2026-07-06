@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research &amp; data · PH Small-Boat Platform</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead compact">
+  <div class="kicker">15.024 Applied Economics for Managers · Team Project Pack · July 2026</div>
+  <h1><a href="index.html" class="home-link">Verified Small-Boat Transfers in the Philippines</a></h1>
+</header>
+<nav class="toc">
+  <a href="index.html">Home</a>
+  <a href="problem.html">1 · Problem</a>
+  <a href="research.html" class="active">2 · Research & Data</a>
+  <a href="personas.html">3 · Personas</a>
+  <a href="interview-guide.html">4 · Interview Guide</a>
+  <a href="econ-concepts.html">5 · Econ Concepts</a>
+  <a href="business-model.html">6 · Business Model</a>
+  <a href="slides.html">7 · Slides</a>
+</nav>
+<main>
+<section id="s2">
+<div class="secnum">Section 2</div>
+  <h2>Research &amp; data</h2>
+  <p class="sans" style="font-size:13px;color:var(--muted)">Every figure tagged. <span class="tag src">SOURCED</span> = traced to a primary document or reputable outlet. <span class="tag est">ESTIMATED</span> = derived or unverifiable; do not present without the caveat.</p>
+
+  <h3>2.1 · Market size &amp; demand</h3>
+  <table>
+    <tr><th>Metric</th><th>Value</th><th>Status</th><th>Source</th></tr>
+    <tr><td>PPA port passenger movements, 2025 target</td><td>85.41M (69.13M actual by Oct 2025)</td><td><span class="tag src">SOURCED</span></td><td>PPA via PortCalls</td></tr>
+    <tr><td>Holiday-peak port passengers (Christmas/NY)</td><td>4.7M–6.2M</td><td><span class="tag src">SOURCED</span></td><td>PPA / PNA / Manila Bulletin</td></tr>
+    <tr><td>International tourist arrivals, 2023</td><td>5.45M</td><td><span class="tag src">SOURCED</span></td><td>DOT</td></tr>
+    <tr><td>El Nido tourist arrivals, 2023</td><td>500,408</td><td><span class="tag src">SOURCED</span></td><td>PIA / El Nido LGU</td></tr>
+    <tr><td>Siargao tourist arrivals, 2023</td><td>529,822 (+511% YoY, post-Odette recovery)</td><td><span class="tag src">SOURCED</span></td><td>PSA / local reports</td></tr>
+    <tr><td>Share of sea passengers that are tourists</td><td>~20% (rest commuting/trade)</td><td><span class="tag est">ESTIMATED</span></td><td>Ratio of arrivals to PPA throughput</td></tr>
+    <tr><td>Small-boat volume outside PPA terminals</td><td>Uncounted — no national statistic exists</td><td><span class="tag est">ESTIMATED</span></td><td>Data gap; itself a finding</td></tr>
+  </table>
+
+  <h3>2.2 · Supply &amp; fragmentation</h3>
+  <table>
+    <tr><th>Metric</th><th>Value</th><th>Status</th><th>Source</th></tr>
+    <tr><td>Domestic fleet, 2019 (pre-phase-out peak)</td><td>28,210 vessels: 24,483 motorbancas / 3,727 larger</td><td><span class="tag src">SOURCED</span></td><td>MARINA 2019 Statistical Report</td></tr>
+    <tr><td>Registered domestic ships, 2022</td><td>~16,000 (contraction from pandemic + wooden-hull phase-out)</td><td><span class="tag src">SOURCED</span></td><td>MARINA</td></tr>
+    <tr><td>Accredited shipping entities, 2024</td><td>3,438 — of which 2,785 (81%) single proprietorships</td><td><span class="tag src">SOURCED</span></td><td>MARINA 2024 Statistical Report</td></tr>
+    <tr><td>&lt;3 GT boat registration authority</td><td>Devolved to LGUs (EO 305) → no national registry</td><td><span class="tag src">SOURCED</span></td><td>EO 305; MARINA</td></tr>
+    <tr><td>Wooden-hull passenger phase-out</td><td>Mandated (MC 2016-02); FRP replacement ₱5–8M per boat</td><td><span class="tag src">SOURCED</span></td><td>MARINA; PNA; Guimaras LGU</td></tr>
+  </table>
+  <div class="card rust"><strong>Supply-side implication.</strong> Fragmentation is extreme (marketplace-favorable) but shrinking: the hull phase-out is a capital shock single proprietors cannot finance, so consolidation risk is real. A platform that channels prepaid demand — and potentially boat financing — to compliant small operators is aligned with the regulator, not against it.</div>
+
+  <h3>2.3 · Price ladder (per-transaction gross booking value)</h3>
+  <figure>
+    <svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Price ladder of Philippine sea-transport products">
+      <style>.bl{font:12px 'Helvetica Neue',Arial,sans-serif;fill:#232A3C}.bv{font:13px Georgia,serif;fill:#1E2A4A;font-weight:bold}.ax{stroke:#D9D2C3;stroke-width:1}</style>
+      <line x1="150" y1="20" x2="150" y2="262" class="ax"/>
+      <line x1="150" y1="262" x2="740" y2="262" class="ax"/>
+      <!-- bars: sqrt scale of midpoint pesos: 100->~5.9, 1500->23, 2275->28, 10000->59, 18900->81, 28000->99 ; px = sqrt(v)*5.6 -->
+      <rect x="150" y="30"  width="56"  height="26" fill="#8A93A8"/>
+      <rect x="150" y="68"  width="217" height="26" fill="#6B7A9C"/>
+      <rect x="150" y="106" width="267" height="26" fill="#4F608A"/>
+      <rect x="150" y="144" width="330" height="26" fill="#B4532A"/>
+      <rect x="150" y="182" width="454" height="26" fill="#9C4423"/>
+      <rect x="150" y="220" width="560" height="26" fill="#C9962E"/>
+      <text x="142" y="47"  text-anchor="end" class="bl">Resident hop</text>
+      <text x="142" y="85"  text-anchor="end" class="bl">Group tour (per pax)</text>
+      <text x="142" y="123" text-anchor="end" class="bl">El Nido–Coron ferry</text>
+      <text x="142" y="161" text-anchor="end" class="bl">Private ABCD charter</text>
+      <text x="142" y="199" text-anchor="end" class="bl">Multi-day expedition (pax)</text>
+      <text x="142" y="237" text-anchor="end" class="bl">Premium charter / day</text>
+      <text x="212" y="47"  class="bv">₱50–150</text>
+      <text x="373" y="85"  class="bv">₱1,200–1,800</text>
+      <text x="423" y="123" class="bv">₱1,700–2,850</text>
+      <text x="486" y="161" class="bv">₱8,000–12,000</text>
+      <text x="610" y="199" class="bv">₱18,900</text>
+      <text x="590" y="255" class="bv" fill="#7A5A15">up to ₱38,000</text>
+      <text x="150" y="290" class="bl" fill="#6B7183">Bar length ∝ √(price midpoint). Sources: Barkota/route pages; Sea Quest El Nido rate card; Seatours Palawan; 12Go/Klook listings.</text>
+    </svg>
+    <figcaption>Fig. 1 — The same physical asset (a bangka and crew) earns 100–400× more per transaction at the top of the ladder than the bottom. Monetization must live at the top; equity requires leaving the bottom un-taxed.</figcaption>
+  </figure>
+
+  <h3>2.4 · Competition map</h3>
+  <table>
+    <tr><th>Player</th><th>Segment</th><th>What they actually do</th><th>Take / fee</th></tr>
+    <tr><td>Barkota</td><td>Scheduled ferries</td><td>Consumer aggregator (13+ lines incl. OceanJet, Starlite, Jomalia, FastCat) <em>plus</em> B2B booking SaaS sold to shipping lines <em>plus</em> travel-agent reseller network. 1M+ tickets sold.</td><td>Web admin fees (non-refundable)</td></tr>
+    <tr><td>Tripket</td><td>Scheduled ferries</td><td>Mobile-first aggregator; OceanJet et al.</td><td>n/a public</td></tr>
+    <tr><td>Klook / KKday / 12Go / GetYourGuide</td><td>Tourist tours &amp; ferry tickets</td><td>Sell El Nido–Coron ferries and standardized island-hopping tours, incl. private options; global demand engines.</td><td>Klook 20–35% commission; 12Go affiliate ≈$3/booking</td></tr>
+    <tr><td>GetMyBoat</td><td>Global charters</td><td>Lists Philippine boat rentals; thin local ops, no verification layer.</td><td>~n/a public</td></tr>
+    <tr><td>Vertically integrated locals (Sea Quest, Seatours, Discover El Nido, El Nido Paradise…)</td><td>Premium charters &amp; expeditions</td><td>Direct web booking, DOT/MARINA accreditation marketed, weather refund guarantees, WhatsApp support. Sea Quest alone: 30,000+ guests/yr.</td><td>Own margin (integrated)</td></tr>
+    <tr><td>Beach dispatchers / cooperatives</td><td>Everything analog</td><td>Control walk-up queues and pier access; documented blocking of outside entrants (Caticlan coop vs. Montenegro Lines, Boracay).</td><td>Cash spread</td></tr>
+    <tr><td colspan="4" style="background:#F3E9D6"><strong>White space (corrected):</strong> not "no one digitizes charters" — GetYourGuide and integrated locals already sell them. The gap is the <strong>long tail of single-proprietor boatmen</strong> who are invisible to OTAs and cannot meet OTA onboarding/marketing requirements, losing premium traffic to the ~dozen integrated operators. This is a <em>supply-aggregation</em> play, not a demand white space.</td></tr>
+  </table>
+
+  <h3>2.5 · Regulatory facts (all sourced)</h3>
+  <ul class="tight">
+    <li><strong>MC DS-2026-01 (Apr 2026), "SEAS/SOTS":</strong> mandatory online ticketing + e-manifests for all RoPax and fast craft; pilot Q2 2026, rollout Q3; 52 major ports within 2 years, all ports within 4. <strong>Motorbancas, recreational and service boats exempt.</strong> Compliance possible via own system, third party, or SEAS subscription (100% Annual Tonnage Fee discount up to 3 yrs for early adopters).</li>
+    <li><strong>RA 11659 (2022):</strong> domestic shipping removed from "public utility" definition → up to 100% foreign ownership permitted.</li>
+    <li><strong>RA 9295 + IRR:</strong> CPC regime, compulsory passenger insurance, and — Section 13 — explicit rate regulation on <em>monopolized routes</em>, i.e., the state legally recognizes route-level monopoly in this market.</li>
+    <li><strong>Common carrier doctrine:</strong> "extraordinary diligence" standard; a platform that prices, packages, and takes payment risks reclassification as a carrier — liability design is existential, not cosmetic.</li>
+    <li><strong>El Nido LGU tour regulation:</strong> the municipality mandates uniform tour menus and <em>identical prices</em> across all operators for the standard A/B/C/D tours, licenses guides, and caps daily visitors at sites like Big Lagoon. Price competition on standardized tours is legally shut off; competition occurs on quality, and charter/expedition pricing remains free.</li>
+  </ul>
+
+  <h3>2.6 · Pain evidence (ranked)</h3>
+  <table>
+    <tr><th>Pain</th><th>Evidence</th><th>Status</th></tr>
+    <tr><td>Weather disruption</td><td>~20 typhoons/yr; PCG no-sail orders; 6,607 stranded across 86 ports (Super Typhoon Uwan); 4,388 (TS Ramil). No automated refund/rebooking machinery exists for small boats.</td><td><span class="tag src">SOURCED</span></td></tr>
+    <tr><td>Safety</td><td>4,467 maritime accidents 2015–2020 (PCG data, MDPI spatial study); small-banca capsizing = most fatal category.</td><td><span class="tag src">SOURCED</span></td></tr>
+    <tr><td>Booking friction</td><td>MARINA justified SEAS citing scalping, long lines, overbooking — the regulator's own diagnosis of the analog system.</td><td><span class="tag src">SOURCED</span></td></tr>
+    <tr><td>Service failures</td><td>Ferry reviews cite broken AC, multi-hour delays, chaotic boarding.</td><td><span class="tag src">SOURCED</span></td></tr>
+    <tr><td>Hotel-side transfer pain</td><td><strong>No systematic evidence gathered yet.</strong> This is the biggest open hole and a primary interview objective.</td><td><span class="tag est">ESTIMATED</span></td></tr>
+  </table>
+
+  <h3>2.7 · Failure precedents</h3>
+  <p><strong>Biyaheroes</strong> (PH bus/ferry aggregator, ₱50 or 10% service fee) failed to scale on low-margin domestic transit — direct evidence that thin-fare aggregation dies. <strong>Tripsta</strong> (OTA) collapsed on liquidity — evidence that holding customer money without weather-shock reserves is fatal in this geography. Both failures point the surviving design toward high-AOV transactions and escrow with disruption reserves.</p>
+</section>
+<div class="pagenav"><a class="pn prev" href="problem.html"><span>← Previous</span><b>1 · Problem</b></a><a class="pn next" href="personas.html"><span>Next →</span><b>3 · Personas</b></a></div>
+</main>
+</body>
+</html>
