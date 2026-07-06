@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;}
+  a{color:#C24A28; text-decoration:none;}
+  a:hover{color:#B8862F;}
+  ::selection{background:#C24A28; color:#F5EFE4;}
+  body{margin:0; background:#F5EFE4;}
+</style>
+</helmet>
+
+<div style="overflow-x:hidden; background:#F5EFE4; color:#162A34; font-family:'Newsreader',Georgia,serif; font-size:17.5px; line-height:1.62; -webkit-font-smoothing:antialiased;">
+
+  <!-- ============ MASTHEAD ============ -->
+  <header style="position:relative; background-color:#0A1A24; color:#EFE6D3; padding:64px 7vw 52px; border-bottom:5px solid #B8862F; background-image:repeating-linear-gradient(0deg, rgba(184,134,47,.06) 0 1px, transparent 1px 46px), repeating-linear-gradient(90deg, rgba(184,134,47,.05) 0 1px, transparent 1px 46px); overflow:hidden;">
+    <div style="max-width:1080px; margin:0 auto; position:relative;">
+      <div style="display:flex; align-items:center; gap:14px; font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:.28em; text-transform:uppercase; color:#C9A24B; margin-bottom:26px;">
+        <span style="width:34px; height:2px; background:#C24A28; display:inline-block;"></span>
+        <span>15.024 Applied Economics for Managers · Team Project Pack · July 2026</span>
+      </div>
+      <h1 style="font-family:'Libre Caslon Display',Georgia,serif; font-weight:400; font-size:clamp(34px,5.2vw,60px); line-height:1.08; margin:0; letter-spacing:-.01em; max-width:20ch;">Verified Small-Boat Transfers in the Philippines:<br><em style="font-style:italic; color:#E6BE73;">a marketplace for the fleet the state cannot see</em></h1>
+      <div style="margin-top:26px; color:#B9C6CE; font-size:16.5px; line-height:1.6; max-width:74ch; border-left:2px solid #2C4653; padding-left:20px;">Working hypothesis: a hybrid B2C marketplace for private bangka charters and premium transfers in Northern Palawan, with hotels as affiliate distribution — built on the segment MARINA's 2026 e-ticketing mandate explicitly exempts. Status: hypothesis to be tested in this week's interviews, not a settled conclusion.</div>
+    </div>
+  </header>
+
+  <!-- ============ STICKY TOC ============ -->
+  <nav style="position:sticky; top:0; z-index:50; background:#07141B; border-bottom:1px solid #21323B; display:flex; flex-wrap:wrap; justify-content:center; padding:0 4vw;">
+    <a href="#s1" style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:#9FB0B8; padding:14px 15px; border-bottom:3px solid transparent;" style-hover="color:#FFFFFF; border-bottom:3px solid #C24A28;">01 · Problem</a>
+    <a href="#s2" style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:#9FB0B8; padding:14px 15px; border-bottom:3px solid transparent;" style-hover="color:#FFFFFF; border-bottom:3px solid #C24A28;">02 · Research &amp; Data</a>
+    <a href="#s3" style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:#9FB0B8; padding:14px 15px; border-bottom:3px solid transparent;" style-hover="color:#FFFFFF; border-bottom:3px solid #C24A28;">03 · Personas</a>
+    <a href="#s4" style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:#9FB0B8; padding:14px 15px; border-bottom:3px solid transparent;" style-hover="color:#FFFFFF; border-bottom:3px solid #C24A28;">04 · Interview Guide</a>
+    <a href="#s5" style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:#9FB0B8; padding:14px 15px; border-bottom:3px solid transparent;" style-hover="color:#FFFFFF; border-bottom:3px solid #C24A28;">05 · Econ Concepts</a>
+    <a href="#s6" style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:#9FB0B8; padding:14px 15px; border-bottom:3px solid transparent;" style-hover="color:#FFFFFF; border-bottom:3px solid #C24A28;">06 · Business Model</a>
+    <a href="#s7" style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:#9FB0B8; padding:14px 15px; border-bottom:3px solid transparent;" style-hover="color:#FFFFFF; border-bottom:3px solid #C24A28;">07 · Slides</a>
+  </nav>
+
+  <main style="max-width:1080px; margin:0 auto; padding:0 32px 110px;">
+
+  <!-- ============ SECTION 1 ============ -->
+  <section id="s1" data-screen-label="Section 01" style="margin-top:72px;">
+    <header style="display:flex; align-items:flex-end; gap:22px; border-bottom:2px solid #162A34; padding-bottom:16px; margin-bottom:32px;">
+      <div style="font-family:'Libre Caslon Display',serif; font-size:66px; line-height:.78; color:#C24A28;">01</div>
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#6D7A80;">Section 01</div>
+        <h2 style="font-family:'Libre Caslon Display',serif; font-weight:400; font-size:clamp(26px,3.4vw,36px); line-height:1.05; color:#162A34; margin:6px 0 0;">The problem we picked, and why</h2>
+      </div>
+    </header>
+
+    <p style="max-width:74ch; margin:0 0 16px;"><strong style="color:#0C1C26;">The problem.</strong> The Philippines is an archipelago of 7,641 islands where the majority of the physical passenger fleet — 24,483 motorbancas versus 3,727 larger vessels in the last full pre-pandemic count — consists of small outrigger boats run overwhelmingly by single proprietors (81% of accredited entities in 2024). For tourists and institutions who depend on these boats, there is no reliable way to verify before boarding whether an operator is licensed, insured, seaworthy, or will show up at all. Trips are arranged by cash and walk-up at beach dispatch queues; capsizing of small bancas is the most fatal accident category in Philippine waters; and roughly 20 typhoons a year trigger Coast Guard no-sail orders that strand thousands with no refund or rebooking machinery.</p>
+
+    <p style="max-width:74ch; margin:0 0 16px;"><strong style="color:#0C1C26;">Why verification is structurally impossible today, not just inconvenient.</strong> Executive Order 305 devolved registration of boats under 3 gross tons to municipal LGUs. The consequence: there is no national registry of the small boats that actually carry tourists. The licenses, insurance requirements, and captain credentials exist in law (RA 9295, MARINA circulars) — but they are paper documents scattered across hundreds of municipal offices. The state created the quality signal and then made it unreadable. This is a textbook information asymmetry that no individual buyer can solve.</p>
+
+    <p style="max-width:74ch; margin:0 0 16px;"><strong style="color:#0C1C26;">Why now.</strong> In April 2026, MARINA Memorandum Circular DS-2026-01 mandated online ticketing (SEAS/SOTS) for all scheduled passenger ships — RoPax and fast craft — while <em>explicitly exempting motorbancas, recreational boats, and service boats</em>. The state just digitized the big-ship segment and drew a regulatory boundary around the small-boat segment, leaving it as the last un-digitized, unverified layer of Philippine sea transport. Simultaneously, RA 11659 removed domestic shipping from the constitutional foreign-ownership cap, making the space investable.</p>
+
+    <p style="max-width:74ch; margin:0 0 16px;"><strong style="color:#0C1C26;">Why we picked it over alternatives.</strong> It scores on every axis Prof. Suri's rubric weights: a genuine, evidenced market failure (not a convenience app); multiple course concepts applied load-bearingly rather than decoratively (information asymmetry, externalities, route-level monopoly, price discrimination, game theory); novelty (no team is likely to present a maritime market with a live 2026 regulatory shock); and it is interviewable this week — boatmen, tourists, hotels, and dispatchers are reachable by Zoom/WhatsApp through Palawan tour operators and hospitality contacts.</p>
+
+    <div style="background:#0C1C26; color:#EFE6D3; padding:24px 30px; border-left:4px solid #B8862F; margin:26px 0; font-size:19px; line-height:1.5;"><strong style="color:#E6BE73; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.18em; text-transform:uppercase; display:block; margin-bottom:8px;">One-line framing</strong>quality in Philippine small-boat transport is valuable, legally defined, and unverifiable — so high-value trades either don't happen or happen unsafely. A platform that makes the state's own quality signal legible can expand total surplus rather than merely taxing captive mobility.</div>
+
+    <h3 style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#162A34; margin:36px 0 14px; display:flex; align-items:center; gap:11px;"><span style="width:22px; height:2px; background:#C24A28;"></span>What we are explicitly NOT doing (and the evidence that killed it)</h3>
+    <table style="width:100%; border-collapse:collapse; margin:8px 0 24px; font-size:15px;">
+      <tr>
+        <th style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; text-align:left; color:#6D7A80; padding:0 14px 9px; border-bottom:2px solid #162A34; width:32%;">Rejected scope</th>
+        <th style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; text-align:left; color:#6D7A80; padding:0 14px 9px; border-bottom:2px solid #162A34;">Killed by</th>
+      </tr>
+      <tr><td style="padding:12px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">Consumer booking for scheduled ferries / RoRo</td><td style="padding:12px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">SEAS mandate forces the segment onto digital ticketing by Q3 2026; Barkota already aggregates 13+ lines and sells the backend SaaS; OTAs (Klook, 12Go, KKday) already sell the tourist routes.</td></tr>
+      <tr><td style="padding:12px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">Booking fees on low-fare resident routes</td><td style="padding:12px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">Fares of ₱50–150; support + payment costs exceed any defensible fee; equity problem of taxing captive commuters.</td></tr>
+      <tr><td style="padding:12px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">B2B SaaS ticketing for large operators</td><td style="padding:12px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">State-mandated compliance market that incumbents (Barkota) are positioned to win; not a student-startup entry point.</td></tr>
+      <tr><td style="padding:12px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">Pure hotel-paid B2B network (memo v1)</td><td style="padding:12px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">Repeat institutional buyers have maximal disintermediation incentive; TAM restricted to concierge-served guests. <em>Downgraded to affiliate channel — but the hotel pay-vs-refer question is still open and is a primary interview target.</em></td></tr>
+    </table>
+
+    <h3 style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#162A34; margin:36px 0 14px; display:flex; align-items:center; gap:11px;"><span style="width:22px; height:2px; background:#C24A28;"></span>Who pays - B2B vs. B2C, and why we chose B2C</h3>
+    <p style="max-width:74ch; margin:0 0 16px;"><strong style="color:#0C1C26;">The payer question is the whole business.</strong> The prior memo proposed a B2B model: sell a certified-boat network to hotels, who pay a subscription. We reject that as the <em>primary</em> model on two evidenced grounds. First, <strong style="color:#0C1C26;">disintermediation</strong> - once we introduce a hotel to a reliable verified boatman, the hotel has every incentive to message him directly next season and cut our commission; a B2B matching service without escrow or pier access decays into a free lead-generation tool. Second, <strong style="color:#0C1C26;">TAM</strong> - a hotel-paid model restricts the market to concierge-served guests of upscale resorts and ignores the larger, higher-willingness-to-pay pool of DIY tourists who book ₱8,000 - 38,000 charters straight from their phones.</p>
+    <p style="max-width:74ch; margin:0 0 16px;">So the payer is the <strong style="color:#0C1C26;">tourist (B2C)</strong>, and hotels are kept as an <strong style="color:#0C1C26;">affiliate channel</strong> that earns a commission for referring guests - not the primary payer. That is the hybrid this pack argues for. The one-shot nature of tourists is a feature, not a bug: they rarely repeat, so demand-side leakage is near zero by construction, and the whole retention problem lives on the supply side, where escrow and platform-only insurance solve it. The full five-model comparison, and the honest limits of the evidence behind it, are laid out in <a href="research.html">Research &amp; Data &sect; 2.8</a>.</p>
+    <div style="background:#0C1C26; color:#EFE6D3; padding:24px 30px; border-left:4px solid #B8862F; margin:26px 0; font-size:17px; line-height:1.5;"><strong style="color:#E6BE73; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.18em; text-transform:uppercase; display:block; margin-bottom:8px;">Honest status</strong>this B2B-vs-B2C verdict is currently argued from marketplace theory and TAM logic, not Philippine hotel evidence. The discriminating question - would a resort <em>pay monthly</em> for a certified network, or only <em>refer guests</em> for a commission? - is exactly what the Track C interviews exist to settle. We present the hybrid as a hypothesis, not a conclusion.</div>
+  </section>
+
+  <!-- ============ SECTION 2 ============ -->
+  <section id="s2" data-screen-label="Section 02" style="margin-top:76px;">
+    <header style="display:flex; align-items:flex-end; gap:22px; border-bottom:2px solid #162A34; padding-bottom:16px; margin-bottom:28px;">
+      <div style="font-family:'Libre Caslon Display',serif; font-size:66px; line-height:.78; color:#C24A28;">02</div>
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#6D7A80;">Section 02</div>
+        <h2 style="font-family:'Libre Caslon Display',serif; font-weight:400; font-size:clamp(26px,3.4vw,36px); line-height:1.05; color:#162A34; margin:6px 0 0;">Research &amp; data</h2>
+      </div>
+    </header>
+    <p style="font-family:'IBM Plex Mono',monospace; font-size:12.5px; line-height:1.6; color:#6D7A80; max-width:80ch; margin:0 0 6px;">Every figure tagged. <span style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.05em; padding:2px 7px; background:#E7EEE4; color:#3E6B4F; border:1px solid #C3D3BD;">SOURCED</span> = traced to a primary document or reputable outlet. <span style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.05em; padding:2px 7px; background:#F3E4DE; color:#9A3324; border:1px solid #E0C0B5;">ESTIMATED</span> = derived or unverifiable; do not present without the caveat.</p>
+
+    <h3 style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#162A34; margin:36px 0 14px; display:flex; align-items:center; gap:11px;"><span style="width:22px; height:2px; background:#C24A28;"></span>2.1 · Market size &amp; demand</h3>
+    <table style="width:100%; border-collapse:collapse; margin:8px 0 24px; font-size:15px;">
+      <tr>
+        <th style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; text-align:left; color:#6D7A80; padding:0 14px 9px; border-bottom:2px solid #162A34;">Metric</th>
+        <th style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; text-align:left; color:#6D7A80; padding:0 14px 9px; border-bottom:2px solid #162A34;">Value</th>
+        <th style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; text-align:left; color:#6D7A80; padding:0 14px 9px; border-bottom:2px solid #162A34;">Status</th>
+        <th style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; text-align:left; color:#6D7A80; padding:0 14px 9px; border-bottom:2px solid #162A34;">Source</th>
+      </tr>
+      <tr><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">PPA port passenger movements, 2025 target</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">85.41M (69.13M actual by Oct 2025)</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;"><span style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.05em; padding:2px 7px; background:#E7EEE4; color:#3E6B4F; border:1px solid #C3D3BD; white-space:nowrap;">SOURCED</span></td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">PPA via PortCalls</td></tr>
+      <tr><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">Holiday-peak port passengers (Christmas/NY)</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">4.7M–6.2M</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;"><span style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.05em; padding:2px 7px; background:#E7EEE4; color:#3E6B4F; border:1px solid #C3D3BD; white-space:nowrap;">SOURCED</span></td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">PPA / PNA / Manila Bulletin</td></tr>
+      <tr><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">International tourist arrivals, 2023</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">5.45M</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;"><span style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.05em; padding:2px 7px; background:#E7EEE4; color:#3E6B4F; border:1px solid #C3D3BD; white-space:nowrap;">SOURCED</span></td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">DOT</td></tr>
+      <tr><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">El Nido tourist arrivals, 2023</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">500,408</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;"><span style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.05em; padding:2px 7px; background:#E7EEE4; color:#3E6B4F; border:1px solid #C3D3BD; white-space:nowrap;">SOURCED</span></td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">PIA / El Nido LGU</td></tr>
+      <tr><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">Siargao tourist arrivals, 2023</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">529,822 (+511% YoY, post-Odette recovery)</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;"><span style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.05em; padding:2px 7px; background:#E7EEE4; color:#3E6B4F; border:1px solid #C3D3BD; white-space:nowrap;">SOURCED</span></td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">PSA / local reports</td></tr>
+      <tr><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">Share of sea passengers that are tourists</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">~20% (rest commuting/trade)</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;"><span style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.05em; padding:2px 7px; background:#F3E4DE; color:#9A3324; border:1px solid #E0C0B5; white-space:nowrap;">ESTIMATED</span></td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">Ratio of arrivals to PPA throughput</td></tr>
+      <tr><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">Small-boat volume outside PPA terminals</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">Uncounted — no national statistic exists</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;"><span style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.05em; padding:2px 7px; background:#F3E4DE; color:#9A3324; border:1px solid #E0C0B5; white-space:nowrap;">ESTIMATED</span></td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">Data gap; itself a finding</td></tr>
+    </table>
+
+    <h3 style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#162A34; margin:36px 0 14px; display:flex; align-items:center; gap:11px;"><span style="width:22px; height:2px; background:#C24A28;"></span>2.2 · Supply &amp; fragmentation</h3>
+    <table style="width:100%; border-collapse:collapse; margin:8px 0 20px; font-size:15px;">
+      <tr>
+        <th style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; text-align:left; color:#6D7A80; padding:0 14px 9px; border-bottom:2px solid #162A34;">Metric</th>
+        <th style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; text-align:left; color:#6D7A80; padding:0 14px 9px; border-bottom:2px solid #162A34;">Value</th>
+        <th style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; text-align:left; color:#6D7A80; padding:0 14px 9px; border-bottom:2px solid #162A34;">Status</th>
+        <th style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; text-align:left; color:#6D7A80; padding:0 14px 9px; border-bottom:2px solid #162A34;">Source</th>
+      </tr>
+      <tr><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">Domestic fleet, 2019 (pre-phase-out peak)</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">28,210 vessels: 24,483 motorbancas / 3,727 larger</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;"><span style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.05em; padding:2px 7px; background:#E7EEE4; color:#3E6B4F; border:1px solid #C3D3BD; white-space:nowrap;">SOURCED</span></td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">MARINA 2019 Statistical Report</td></tr>
+      <tr><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">Registered domestic ships, 2022</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">~16,000 (contraction from pandemic + wooden-hull phase-out)</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;"><span style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.05em; padding:2px 7px; background:#E7EEE4; color:#3E6B4F; border:1px solid #C3D3BD; white-space:nowrap;">SOURCED</span></td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">MARINA</td></tr>
+      <tr><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">Accredited shipping entities, 2024</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">3,438 — of which 2,785 (81%) single proprietorships</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;"><span style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.05em; padding:2px 7px; background:#E7EEE4; color:#3E6B4F; border:1px solid #C3D3BD; white-space:nowrap;">SOURCED</span></td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">MARINA 2024 Statistical Report</td></tr>
+      <tr><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">&lt;3 GT boat registration authority</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">Devolved to LGUs (EO 305) → no national registry</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;"><span style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.05em; padding:2px 7px; background:#E7EEE4; color:#3E6B4F; border:1px solid #C3D3BD; white-space:nowrap;">SOURCED</span></td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">EO 305; MARINA</td></tr>
+      <tr><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">Wooden-hull passenger phase-out</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">Mandated (MC 2016-02); FRP replacement ₱5–8M per boat</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;"><span style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.05em; padding:2px 7px; background:#E7EEE4; color:#3E6B4F; border:1px solid #C3D3BD; white-space:nowrap;">SOURCED</span></td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">MARINA; PNA; Guimaras LGU</td></tr>
+    </table>
+    <div style="background:#FFFFFF; border:1px solid #E4DBC9; border-left:4px solid #C24A28; padding:18px 22px; margin:16px 0;"><strong style="color:#0C1C26;">Supply-side implication.</strong> Fragmentation is extreme (marketplace-favorable) but shrinking: the hull phase-out is a capital shock single proprietors cannot finance, so consolidation risk is real. A platform that channels prepaid demand — and potentially boat financing — to compliant small operators is aligned with the regulator, not against it.</div>
+  </section>
+
+  <!-- FIGURE 1 (centerpiece) -->
+  <figure style="position:relative; left:50%; transform:translateX(-50%); width:100vw; margin:44px 0; padding:0;">
+    <div style="background:#0A1A24; background-image:repeating-linear-gradient(0deg, rgba(184,134,47,.05) 0 1px, transparent 1px 46px), repeating-linear-gradient(90deg, rgba(184,134,47,.045) 0 1px, transparent 1px 46px); padding:48px 32px 40px;">
+      <div style="max-width:1120px; margin:0 auto;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#C9A24B; margin-bottom:6px;">Figure 01 · Price ladder</div>
+        <h3 style="font-family:'Libre Caslon Display',serif; font-weight:400; font-size:clamp(22px,2.8vw,30px); color:#EFE6D3; margin:0 0 26px;">Per-transaction gross booking value</h3>
+        <svg viewBox="0 0 1000 470" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Price ladder of Philippine sea-transport products" style="width:100%; height:auto; display:block;">
+          <line x1="300" y1="40" x2="300" y2="404" stroke="#385260" stroke-width="1.5"/>
+          <line x1="300" y1="404" x2="980" y2="404" stroke="#385260" stroke-width="1.5"/>
+          <!-- rows: y start 56, step 60, bar h 36 -->
+          <rect x="300" y="56"  width="43"  height="36" fill="#4B6C7B"/>
+          <rect x="300" y="116" width="166" height="36" fill="#3D6274"/>
+          <rect x="300" y="176" width="205" height="36" fill="#2F6C7B"/>
+          <rect x="300" y="236" width="430" height="36" fill="#C24A28"/>
+          <rect x="300" y="296" width="591" height="36" fill="#A83E22"/>
+          <rect x="300" y="356" width="720" height="36" fill="#B8862F"/>
+
+          <text x="286" y="79"  text-anchor="end" font-family="'IBM Plex Mono',monospace" font-size="14" fill="#C7D3D9">Resident hop</text>
+          <text x="286" y="139" text-anchor="end" font-family="'IBM Plex Mono',monospace" font-size="14" fill="#C7D3D9">Group tour (per pax)</text>
+          <text x="286" y="199" text-anchor="end" font-family="'IBM Plex Mono',monospace" font-size="14" fill="#C7D3D9">El Nido–Coron ferry</text>
+          <text x="286" y="259" text-anchor="end" font-family="'IBM Plex Mono',monospace" font-size="14" fill="#F0C79A">Private ABCD charter</text>
+          <text x="286" y="319" text-anchor="end" font-family="'IBM Plex Mono',monospace" font-size="14" fill="#F0C79A">Multi-day expedition (pax)</text>
+          <text x="286" y="379" text-anchor="end" font-family="'IBM Plex Mono',monospace" font-size="14" fill="#E6BE73">Premium charter / day</text>
+
+          <text x="355"  y="81"  font-family="'Libre Caslon Display',serif" font-size="19" fill="#EFE6D3">₱50–150</text>
+          <text x="478"  y="141" font-family="'Libre Caslon Display',serif" font-size="19" fill="#EFE6D3">₱1,200–1,800</text>
+          <text x="517"  y="201" font-family="'Libre Caslon Display',serif" font-size="19" fill="#EFE6D3">₱1,700–2,850</text>
+          <text x="742"  y="261" font-family="'Libre Caslon Display',serif" font-size="19" fill="#F7EEDC" font-weight="bold">₱8,000–12,000</text>
+          <text x="903"  y="321" font-family="'Libre Caslon Display',serif" font-size="19" fill="#F7EEDC" font-weight="bold">₱18,900</text>
+          <text x="1008" y="381" text-anchor="end" font-family="'Libre Caslon Display',serif" font-size="19" fill="#12222B" font-weight="bold">up to ₱38,000</text>
+
+          <text x="300" y="438" font-family="'IBM Plex Mono',monospace" font-size="12" fill="#7F929B">Bar length ∝ √(price midpoint). Sources: Barkota/route pages; Sea Quest El Nido rate card; Seatours Palawan; 12Go/Klook listings.</text>
+        </svg>
+        <figcaption style="font-family:'Newsreader',serif; font-size:15px; color:#AEBDC4; margin-top:20px; max-width:88ch; border-top:1px solid #21323B; padding-top:16px;"><strong style="color:#E6BE73;">Fig. 1 —</strong> The same physical asset (a bangka and crew) earns 100–400× more per transaction at the top of the ladder than the bottom. Monetization must live at the top; equity requires leaving the bottom un-taxed.</figcaption>
+      </div>
+    </div>
+  </figure>
+
+  <section style="margin-top:44px;">
+    <h3 style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#162A34; margin:0 0 14px; display:flex; align-items:center; gap:11px;"><span style="width:22px; height:2px; background:#C24A28;"></span>2.4 · Competition map</h3>
+    <table style="width:100%; border-collapse:collapse; margin:8px 0 24px; font-size:14.5px;">
+      <tr>
+        <th style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; text-align:left; color:#6D7A80; padding:0 14px 9px; border-bottom:2px solid #162A34;">Player</th>
+        <th style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; text-align:left; color:#6D7A80; padding:0 14px 9px; border-bottom:2px solid #162A34;">Segment</th>
+        <th style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; text-align:left; color:#6D7A80; padding:0 14px 9px; border-bottom:2px solid #162A34;">What they actually do</th>
+        <th style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; text-align:left; color:#6D7A80; padding:0 14px 9px; border-bottom:2px solid #162A34;">Take / fee</th>
+      </tr>
+      <tr><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">Barkota</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">Scheduled ferries</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">Consumer aggregator (13+ lines incl. OceanJet, Starlite, Jomalia, FastCat) <em>plus</em> B2B booking SaaS sold to shipping lines <em>plus</em> travel-agent reseller network. 1M+ tickets sold.</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">Web admin fees (non-refundable)</td></tr>
+      <tr><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">Tripket</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">Scheduled ferries</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">Mobile-first aggregator; OceanJet et al.</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">n/a public</td></tr>
+      <tr><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">Klook / KKday / 12Go / GetYourGuide</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">Tourist tours &amp; ferry tickets</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">Sell El Nido–Coron ferries and standardized island-hopping tours, incl. private options; global demand engines.</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">Klook 20–35% commission; 12Go affiliate ≈$3/booking</td></tr>
+      <tr><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">GetMyBoat</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">Global charters</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">Lists Philippine boat rentals; thin local ops, no verification layer.</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">~n/a public</td></tr>
+      <tr><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">Vertically integrated locals (Sea Quest, Seatours, Discover El Nido, El Nido Paradise…)</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">Premium charters &amp; expeditions</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">Direct web booking, DOT/MARINA accreditation marketed, weather refund guarantees, WhatsApp support. Sea Quest alone: 30,000+ guests/yr.</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">Own margin (integrated)</td></tr>
+      <tr><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">Beach dispatchers / cooperatives</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">Everything analog</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">Control walk-up queues and pier access; documented blocking of outside entrants (Caticlan coop vs. Montenegro Lines, Boracay).</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">Cash spread</td></tr>
+      <tr><td colspan="4" style="padding:14px 16px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#0C1C26; color:#DCE4E8;"><strong style="color:#E6BE73;">White space (corrected):</strong> not "no one digitizes charters" — GetYourGuide and integrated locals already sell them. The gap is the <strong style="color:#F0C79A;">long tail of single-proprietor boatmen</strong> who are invisible to OTAs and cannot meet OTA onboarding/marketing requirements, losing premium traffic to the ~dozen integrated operators. This is a <em>supply-aggregation</em> play, not a demand white space.</td></tr>
+    </table>
+
+    <h3 style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#162A34; margin:36px 0 14px; display:flex; align-items:center; gap:11px;"><span style="width:22px; height:2px; background:#C24A28;"></span>2.5 · Regulatory facts (all sourced)</h3>
+    <ul style="margin:6px 0 16px 0; padding-left:20px; font-size:16px; list-style:none;">
+      <li style="margin-bottom:12px; padding-left:18px; position:relative; border-left:2px solid #E4DBC9;"><strong style="color:#0C1C26;">MC DS-2026-01 (Apr 2026), "SEAS/SOTS":</strong> mandatory online ticketing + e-manifests for all RoPax and fast craft; pilot Q2 2026, rollout Q3; 52 major ports within 2 years, all ports within 4. <strong style="color:#C24A28;">Motorbancas, recreational and service boats exempt.</strong> Compliance possible via own system, third party, or SEAS subscription (100% Annual Tonnage Fee discount up to 3 yrs for early adopters).</li>
+      <li style="margin-bottom:12px; padding-left:18px; border-left:2px solid #E4DBC9;"><strong style="color:#0C1C26;">RA 11659 (2022):</strong> domestic shipping removed from "public utility" definition → up to 100% foreign ownership permitted.</li>
+      <li style="margin-bottom:12px; padding-left:18px; border-left:2px solid #E4DBC9;"><strong style="color:#0C1C26;">RA 9295 + IRR:</strong> CPC regime, compulsory passenger insurance, and — Section 13 — explicit rate regulation on <em>monopolized routes</em>, i.e., the state legally recognizes route-level monopoly in this market.</li>
+      <li style="margin-bottom:12px; padding-left:18px; border-left:2px solid #E4DBC9;"><strong style="color:#0C1C26;">Common carrier doctrine:</strong> "extraordinary diligence" standard; a platform that prices, packages, and takes payment risks reclassification as a carrier — liability design is existential, not cosmetic.</li>
+      <li style="margin-bottom:0; padding-left:18px; border-left:2px solid #E4DBC9;"><strong style="color:#0C1C26;">El Nido LGU tour regulation:</strong> the municipality mandates uniform tour menus and <em>identical prices</em> across all operators for the standard A/B/C/D tours, licenses guides, and caps daily visitors at sites like Big Lagoon. Price competition on standardized tours is legally shut off; competition occurs on quality, and charter/expedition pricing remains free.</li>
+    </ul>
+
+    <h3 style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#162A34; margin:36px 0 14px; display:flex; align-items:center; gap:11px;"><span style="width:22px; height:2px; background:#C24A28;"></span>2.6 · Pain evidence (ranked)</h3>
+    <table style="width:100%; border-collapse:collapse; margin:8px 0 24px; font-size:15px;">
+      <tr>
+        <th style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; text-align:left; color:#6D7A80; padding:0 14px 9px; border-bottom:2px solid #162A34; width:20%;">Pain</th>
+        <th style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; text-align:left; color:#6D7A80; padding:0 14px 9px; border-bottom:2px solid #162A34;">Evidence</th>
+        <th style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; text-align:left; color:#6D7A80; padding:0 14px 9px; border-bottom:2px solid #162A34;">Status</th>
+      </tr>
+      <tr><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">Weather disruption</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">~20 typhoons/yr; PCG no-sail orders; 6,607 stranded across 86 ports (Super Typhoon Uwan); 4,388 (TS Ramil). No automated refund/rebooking machinery exists for small boats.</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;"><span style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.05em; padding:2px 7px; background:#E7EEE4; color:#3E6B4F; border:1px solid #C3D3BD; white-space:nowrap;">SOURCED</span></td></tr>
+      <tr><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">Safety</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">4,467 maritime accidents 2015–2020 (PCG data, MDPI spatial study); small-banca capsizing = most fatal category.</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;"><span style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.05em; padding:2px 7px; background:#E7EEE4; color:#3E6B4F; border:1px solid #C3D3BD; white-space:nowrap;">SOURCED</span></td></tr>
+      <tr><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">Booking friction</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">MARINA justified SEAS citing scalping, long lines, overbooking — the regulator's own diagnosis of the analog system.</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;"><span style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.05em; padding:2px 7px; background:#E7EEE4; color:#3E6B4F; border:1px solid #C3D3BD; white-space:nowrap;">SOURCED</span></td></tr>
+      <tr><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">Service failures</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">Ferry reviews cite broken AC, multi-hour delays, chaotic boarding.</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;"><span style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.05em; padding:2px 7px; background:#E7EEE4; color:#3E6B4F; border:1px solid #C3D3BD; white-space:nowrap;">SOURCED</span></td></tr>
+      <tr><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">Hotel-side transfer pain</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;"><strong style="color:#0C1C26;">No systematic evidence gathered yet.</strong> This is the biggest open hole and a primary interview objective.</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;"><span style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.05em; padding:2px 7px; background:#F3E4DE; color:#9A3324; border:1px solid #E0C0B5; white-space:nowrap;">ESTIMATED</span></td></tr>
+    </table>
+
+    <h3 style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#162A34; margin:36px 0 14px; display:flex; align-items:center; gap:11px;"><span style="width:22px; height:2px; background:#C24A28;"></span>2.7 · Failure precedents</h3>
+    <p style="max-width:74ch; margin:0 0 16px;"><strong style="color:#0C1C26;">Biyaheroes</strong> (PH bus/ferry aggregator, ₱50 or 10% service fee) failed to scale on low-margin domestic transit — direct evidence that thin-fare aggregation dies. <strong style="color:#0C1C26;">Tripsta</strong> (OTA) collapsed on liquidity — evidence that holding customer money without weather-shock reserves is fatal in this geography. Both failures point the surviving design toward high-AOV transactions and escrow with disruption reserves.</p>
+
+    <h3 style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#162A34; margin:36px 0 14px; display:flex; align-items:center; gap:11px;"><span style="width:22px; height:2px; background:#C24A28;"></span>2.8 · Model selection - B2B vs. B2C (the memo disagreement)</h3>
+    <p style="max-width:78ch; margin:0 0 6px;">The two research memos split on who pays. Evaluating five candidate models against payer, addressable pool, and disintermediation risk isolates the hybrid - tourists pay, hotels refer - as the only structure that aligns high willingness-to-pay with the fragmented, SEAS-exempt supply. The B2B hotel model the first memo favored is rejected on incentive grounds, not distaste.</p>
+    <table style="width:100%; border-collapse:collapse; margin:8px 0 20px; font-size:14.5px;">
+      <tr>
+        <th style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; text-align:left; color:#6D7A80; padding:0 14px 9px; border-bottom:2px solid #162A34;">Model</th>
+        <th style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; text-align:left; color:#6D7A80; padding:0 14px 9px; border-bottom:2px solid #162A34;">Primary payer</th>
+        <th style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; text-align:left; color:#6D7A80; padding:0 14px 9px; border-bottom:2px solid #162A34;">Addressable pool</th>
+        <th style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; text-align:left; color:#6D7A80; padding:0 14px 9px; border-bottom:2px solid #162A34;">Bypass risk</th>
+        <th style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; text-align:left; color:#6D7A80; padding:0 14px 9px; border-bottom:2px solid #162A34;">Verdict</th>
+      </tr>
+      <tr><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">B2C resident ferry aggregator</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">Local commuters</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">80M+ pax; AOV $2 - 5</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">Low</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;"><strong style="color:#9A3324;">Reject</strong> - Barkota + SEAS commoditize it</td></tr>
+      <tr><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">B2B hotel network <em>(memo v1)</em></td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">Hotels / resorts</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">Small - concierge guests only</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;"><strong style="color:#9A3324;">Critical</strong></td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;"><strong style="color:#9A3324;">Reject</strong> - hotels bypass once supply is secured</td></tr>
+      <tr><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">B2B SaaS for operators</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">Boat operators</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">2,785 single proprietors</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">Low</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;"><strong style="color:#9A3324;">Reject</strong> - no WTP for software</td></tr>
+      <tr><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">Pure B2C tourist marketplace</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">Tourists</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">8.5M+ pax; AOV $30 - 450</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">Medium</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;"><strong style="color:#8A6F2E;">Runner-up</strong> - high OTA acquisition cost</td></tr>
+      <tr><td style="padding:11px 14px; border-bottom:1px solid #0A1A24; vertical-align:top; background:#0C1C26; color:#DCE4E8;"><strong style="color:#E6BE73;">Hybrid: B2C marketplace + B2B affiliate</strong></td><td style="padding:11px 14px; border-bottom:1px solid #0A1A24; vertical-align:top; background:#0C1C26; color:#DCE4E8;">Tourists pay; resorts refer</td><td style="padding:11px 14px; border-bottom:1px solid #0A1A24; vertical-align:top; background:#0C1C26; color:#DCE4E8;">Unregulated premium charter pool</td><td style="padding:11px 14px; border-bottom:1px solid #0A1A24; vertical-align:top; background:#0C1C26; color:#DCE4E8;">Low (escrow + SLAs)</td><td style="padding:11px 14px; border-bottom:1px solid #0A1A24; vertical-align:top; background:#0C1C26; color:#DCE4E8;"><strong style="color:#E6BE73;">Recommended</strong> - high WTP meets fragmented supply</td></tr>
+    </table>
+    <div style="background:#FFFFFF; border:1px solid #E4DBC9; border-left:4px solid #C24A28; padding:18px 22px; margin:16px 0;"><strong style="color:#0C1C26;">Reading this honestly.</strong> The verdicts above are argued from marketplace theory and TAM math, not Philippine hotel evidence - the disintermediation case rests on generic marketplace sources, and no resort, boatman, or dispatcher has yet been asked what they would actually pay. The single question that resolves B2B vs. B2C - <em>"would you pay a monthly fee, or only refer guests for a commission?"</em> - is carried into <a href="interview-guide.html">Interview Guide, Track C</a>, with a matching Track B question on whether boatmen accept a 15 - 20% take with escrow. Until those return, the hybrid is our working hypothesis, not a finding.</div>
+  </section>
+
+  <!-- ============ SECTION 3 ============ -->
+  <section id="s3" data-screen-label="Section 03" style="margin-top:76px;">
+    <header style="display:flex; align-items:flex-end; gap:22px; border-bottom:2px solid #162A34; padding-bottom:16px; margin-bottom:28px;">
+      <div style="font-family:'Libre Caslon Display',serif; font-size:66px; line-height:.78; color:#C24A28;">03</div>
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#6D7A80;">Section 03</div>
+        <h2 style="font-family:'Libre Caslon Display',serif; font-weight:400; font-size:clamp(26px,3.4vw,36px); line-height:1.05; color:#162A34; margin:6px 0 0;">Personas</h2>
+      </div>
+    </header>
+    <p style="max-width:74ch; margin:0 0 20px;">Five actors define the market. The first two are demand, the third is supply, the fourth is channel, the fifth is the gatekeeper. Each maps to an interview track in Section 4.</p>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:18px; margin-top:14px;">
+      <div style="background:#FFFFFF; border:1px solid #E4DBC9; border-top:3px solid #C24A28; padding:22px;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:#C24A28;">Demand · Primary payer</div>
+        <h4 style="font-family:'Libre Caslon Display',serif; font-weight:400; font-size:22px; color:#162A34; margin:6px 0 12px;">Emma &amp; Jake — honeymooners, Sydney</h4>
+        <dl style="margin:0;">
+          <dt style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:#6D7A80; margin-top:12px;">Context</dt><dd style="font-size:15px; margin:3px 0 0;">10 days in Palawan, once-in-years trip, plan 4–8 weeks ahead, book everything they can online. Budget for a private charter day: $150–450.</dd>
+          <dt style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:#6D7A80; margin-top:12px;">Pains</dt><dd style="font-size:15px; margin:3px 0 0;">Cannot tell a licensed twin-engine boat from an uninsured one; horror stories about capsizes; fear of losing money to weather cancellation; no recourse if the boat no-shows.</dd>
+          <dt style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:#6D7A80; margin-top:12px;">Current behavior</dt><dd style="font-size:15px; margin:3px 0 0;">Books Klook/GetYourGuide standardized tours or a top-reviewed integrated operator; the long tail of cheaper local boatmen is invisible to them.</dd>
+          <dt style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:#6D7A80; margin-top:12px;">What they buy from us</dt><dd style="font-size:15px; margin:3px 0 0;">Verified credentials + escrow + weather refund + English-language coordination. One-shot customer: retention irrelevant, trust at first contact is everything.</dd>
+        </dl>
+      </div>
+
+      <div style="background:#FFFFFF; border:1px solid #E4DBC9; border-top:3px solid #B8862F; padding:22px;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:#C24A28;">Demand · Volume, not margin</div>
+        <h4 style="font-family:'Libre Caslon Display',serif; font-weight:400; font-size:22px; color:#162A34; margin:6px 0 12px;">Mika — backpacker, Manila-based, 26</h4>
+        <dl style="margin:0;">
+          <dt style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:#6D7A80; margin-top:12px;">Context</dt><dd style="font-size:15px; margin:3px 0 0;">Joins ₱1,800 group tours; price-sensitive; books day-of at a beach counter or on Klook if there's a voucher.</dd>
+          <dt style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:#6D7A80; margin-top:12px;">Pains</dt><dd style="font-size:15px; margin:3px 0 0;">Queues and scalping in peak season; tour quality lottery; but tolerance is high and switching cost is zero.</dd>
+          <dt style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:#6D7A80; margin-top:12px;">What they buy from us</dt><dd style="font-size:15px; margin:3px 0 0;">Little. Prices are LGU-fixed on standard tours, so we cannot compete on price and margins are ₱ thin. Mika is a persona we consciously <em>deprioritize</em> — including her keeps the segmentation honest.</dd>
+        </dl>
+      </div>
+
+      <div style="background:#FFFFFF; border:1px solid #E4DBC9; border-top:3px solid #2F6C7B; padding:22px;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:#C24A28;">Supply · The invisible fleet</div>
+        <h4 style="font-family:'Libre Caslon Display',serif; font-weight:400; font-size:22px; color:#162A34; margin:6px 0 12px;">Mang Ricardo — single-proprietor boatman, El Nido</h4>
+        <dl style="margin:0;">
+          <dt style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:#6D7A80; margin-top:12px;">Context</dt><dd style="font-size:15px; margin:3px 0 0;">Owns one 15-pax bangka, LGU-registered, licensed captain in a drawer at home. Gets customers from the dispatcher queue and repeat hotel contacts. All cash.</dd>
+          <dt style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:#6D7A80; margin-top:12px;">Pains</dt><dd style="font-size:15px; margin:3px 0 0;">Empty seats and idle days while integrated operators run full; premium foreign traffic goes to the dozen branded companies; wooden-hull phase-out threatens a ₱5–8M replacement he cannot finance; typhoon days are zero-income days.</dd>
+          <dt style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:#6D7A80; margin-top:12px;">What he buys from us</dt><dd style="font-size:15px; margin:3px 0 0;">Prepaid foreign demand at charter rates he never accesses. Key unknowns: will he accept 15–20% commission, escrow (paid after the trip), and document verification? Nobody has asked him yet.</dd>
+        </dl>
+      </div>
+
+      <div style="background:#FFFFFF; border:1px solid #E4DBC9; border-top:3px solid #C24A28; padding:22px;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:#C24A28;">Channel · Pay or refer?</div>
+        <h4 style="font-family:'Libre Caslon Display',serif; font-weight:400; font-size:22px; color:#162A34; margin:6px 0 12px;">Carla — operations manager, 24-room boutique resort</h4>
+        <dl style="margin:0;">
+          <dt style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:#6D7A80; margin-top:12px;">Context</dt><dd style="font-size:15px; margin:3px 0 0;">Arranges 5–20 guest transfers/tours a week through 2–3 trusted boatmen saved in her phone. A failed transfer means a furious review.</dd>
+          <dt style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:#6D7A80; margin-top:12px;">Pains</dt><dd style="font-size:15px; margin:3px 0 0;">Her trusted boats are sometimes full or grounded; no backup network; she carries informal liability if a guest is hurt on a boat she recommended.</dd>
+          <dt style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:#6D7A80; margin-top:12px;">The open question</dt><dd style="font-size:15px; margin:3px 0 0;">Will she <em>pay</em> (subscription/SLA) or only <em>refer</em> (affiliate commission)? Memo v1 assumed pay; the deep research assumed refer; neither has evidence. This single answer selects our business model.</dd>
+        </dl>
+      </div>
+
+      <div style="background:#FFFFFF; border:1px solid #E4DBC9; border-top:3px solid #0C1C26; padding:22px;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:#C24A28;">Gatekeeper · Cannot be bypassed</div>
+        <h4 style="font-family:'Libre Caslon Display',serif; font-weight:400; font-size:22px; color:#162A34; margin:6px 0 12px;">Ka Tonying — dispatcher &amp; cooperative officer</h4>
+        <dl style="margin:0;">
+          <dt style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:#6D7A80; margin-top:12px;">Context</dt><dd style="font-size:15px; margin:3px 0 0;">Runs the beach queue rotation; the cooperative negotiated pier access with the LGU and has blocked outside entrants before (Caticlan precedent).</dd>
+          <dt style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:#6D7A80; margin-top:12px;">Pains</dt><dd style="font-size:15px; margin:3px 0 0;">Sees platforms as commission thieves; but also absorbs tourist complaints, no-shows, and refund fights with no tools.</dd>
+          <dt style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:#6D7A80; margin-top:12px;">What he buys from us</dt><dd style="font-size:15px; margin:3px 0 0;">Either a cut / official role (co-op as verified supply partner) or nothing — in which case he is the kill risk. Design decision: platform routes bookings <em>through</em> the rotation, not around it.</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 4 ============ -->
+  <section id="s4" data-screen-label="Section 04" style="margin-top:76px;">
+    <header style="display:flex; align-items:flex-end; gap:22px; border-bottom:2px solid #162A34; padding-bottom:16px; margin-bottom:28px;">
+      <div style="font-family:'Libre Caslon Display',serif; font-size:66px; line-height:.78; color:#C24A28;">04</div>
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#6D7A80;">Section 04</div>
+        <h2 style="font-family:'Libre Caslon Display',serif; font-weight:400; font-size:clamp(26px,3.4vw,36px); line-height:1.05; color:#162A34; margin:6px 0 0;">Interview guide</h2>
+      </div>
+    </header>
+    <p style="max-width:78ch; margin:0 0 22px;">Four tracks, 20 minutes each. Every track has (a) an objective tied to a model decision, (b) questions, (c) the idea-killing answer stated in advance, and (d) the <em>discriminator</em> — the single answer that selects between business-model variants. Interviews are the arbiter of the B2B-vs-B2C question the two research memos disagreed on.</p>
+
+    <div style="background:#FFFFFF; border:1px solid #E4DBC9; margin:16px 0; padding:22px 24px;">
+      <h3 style="font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:.1em; text-transform:uppercase; color:#0C1C26; margin:0 0 6px;">Track A · Tourist / recent visitor</h3>
+      <div style="font-size:14.5px; color:#6D7A80; font-style:italic; margin-bottom:14px;">Objective: validate pre-trip booking behavior and a price premium for verification + refund protection. Decides: take-rate ceiling and Model A viability.</div>
+      <ol style="margin:0 0 12px 22px; font-size:15.5px; line-height:1.55;">
+        <li style="margin-bottom:7px;">Walk me through the last boat trip or island tour you took in the Philippines (or SE Asia). How did you find and book the boat, and when — before the trip or on the ground?</li>
+        <li style="margin-bottom:7px;">What did it cost? Did you compare options? What information did you wish you had?</li>
+        <li style="margin-bottom:7px;">Did you check — or even think about — whether the boat was licensed or insured? What would have made you feel safe?</li>
+        <li style="margin-bottom:7px;">Anything go wrong: delay, cancellation, weather, overcharge, no-show? What happened to your money?</li>
+        <li style="margin-bottom:7px;">For a private charter around $150–300: would you pay 10–15% more for a verified operator, money held until the trip happens, and an automatic refund/rebooking if the Coast Guard cancels sailing? What about 20%?</li>
+        <li style="margin-bottom:0;">Would you book that on a website weeks ahead, or wait and arrange it at the hotel/beach? Why?</li>
+      </ol>
+      <div style="background:#F6E9E4; border-left:4px solid #9A3324; padding:11px 15px; font-size:14.5px; margin-top:10px;"><b style="color:#9A3324;">Idea-killing answer:</b> "I just booked whatever at the beach, it was fine, everyone does it, and I wouldn't pay extra for paperwork."</div>
+      <div style="background:#EBF1E7; border-left:4px solid #3E6B4F; padding:11px 15px; font-size:14.5px; margin-top:8px;"><b style="color:#3E6B4F;">Discriminator:</b> if pre-trip online booking + premium WTP holds only for <em>private charters</em> but not group tours, Model A narrows to the charter wedge — confirming the price-ladder thesis.</div>
+    </div>
+
+    <div style="background:#FFFFFF; border:1px solid #E4DBC9; margin:16px 0; padding:22px 24px;">
+      <h3 style="font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:.1em; text-transform:uppercase; color:#0C1C26; margin:0 0 6px;">Track B · Boatman / operator</h3>
+      <div style="font-size:14.5px; color:#6D7A80; font-style:italic; margin-bottom:14px;">Objective: test supply-side adoption of commission + escrow + verification. Decides: take rate, payout design, and whether the long tail is reachable.</div>
+      <ol style="margin:0 0 12px 22px; font-size:15.5px; line-height:1.55;">
+        <li style="margin-bottom:7px;">What boat(s) do you run, on what routes/tours, and what papers do you need to operate? Who checks them, and how often?</li>
+        <li style="margin-bottom:7px;">In high season and low season: how many days a month does the boat go out, and how full is it? What does an idle day cost you?</li>
+        <li style="margin-bottom:7px;">Where do your customers come from today — dispatcher queue, hotels, repeat guests, Facebook? What share is foreign tourists paying charter rates?</li>
+        <li style="margin-bottom:7px;">If we brought you prepaid private-charter bookings from foreign tourists: what commission is acceptable — 10%, 15%, 20%? At what number do you walk away?</li>
+        <li style="margin-bottom:7px;">Payment lands in your GCash <em>after</em> the trip completes (escrow). Acceptable? What would make it not acceptable?</li>
+        <li style="margin-bottom:7px;">Would you upload your registration, captain's license, and insurance to be listed as "verified"? What if verified boats visibly get more bookings?</li>
+        <li style="margin-bottom:7px;">The wooden-hull phase-out: what's your plan? Would financing tied to platform bookings interest you?</li>
+        <li style="margin-bottom:0;">If a guest you met through us calls you directly next season — what do you do?</li>
+      </ol>
+      <div style="background:#F6E9E4; border-left:4px solid #9A3324; padding:11px 15px; font-size:14.5px; margin-top:10px;"><b style="color:#9A3324;">Idea-killing answer:</b> "I'm full in season, cash only, no commission, and the co-op wouldn't allow it anyway."</div>
+      <div style="background:#EBF1E7; border-left:4px solid #3E6B4F; padding:11px 15px; font-size:14.5px; margin-top:8px;"><b style="color:#3E6B4F;">Discriminator:</b> acceptance of ≥15% commission <em>with</em> escrow makes Model A's margin math live; acceptance of commission but rejection of escrow forces a redesign of the retention mechanism.</div>
+    </div>
+
+    <div style="background:#FFFFFF; border:1px solid #E4DBC9; margin:16px 0; padding:22px 24px;">
+      <h3 style="font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:.1em; text-transform:uppercase; color:#0C1C26; margin:0 0 6px;">Track C · Hotel / resort / tour desk</h3>
+      <div style="font-size:14.5px; color:#6D7A80; font-style:italic; margin-bottom:14px;">Objective: resolve the pay-vs-refer question that splits memo v1 (B2B) from memo v2 (hybrid). This is the highest-stakes track.</div>
+      <ol style="margin:0 0 12px 22px; font-size:15.5px; line-height:1.55;">
+        <li style="margin-bottom:7px;">How do your guests get boats today — transfers, tours, charters? Who arranges it, and with which operators?</li>
+        <li style="margin-bottom:7px;">Tell me about the last transfer that failed. What did it cost you — refunds, comps, the review?</li>
+        <li style="margin-bottom:7px;">What do you check about a boat before putting a guest on it? Do you carry any liability if something happens?</li>
+        <li style="margin-bottom:7px;">When your trusted boats are full or grounded, what do you do?</li>
+        <li style="margin-bottom:7px;">Two versions of the same service — tell me which is real: (a) you <em>pay</em> ₱X,000/month for a certified network, guaranteed backup boats, insurance on every trip, and we handle disruptions; or (b) you pay nothing, refer guests to our platform, and earn 5–10% of every booking.</li>
+        <li style="margin-bottom:7px;">Under (b): after we introduce you to three reliable verified boatmen — honestly, why would you keep booking through us instead of calling them directly?</li>
+        <li style="margin-bottom:0;">Would you sign anything exclusive or preferred? What SLA term actually matters: response time, backup boat, refund speed, insurance certificate?</li>
+      </ol>
+      <div style="background:#F6E9E4; border-left:4px solid #9A3324; padding:11px 15px; font-size:14.5px; margin-top:10px;"><b style="color:#9A3324;">Idea-killing answer:</b> "We have two exclusive boats we trust, they're never full, and we'd never pay or send guests to a third-party site."</div>
+      <div style="background:#EBF1E7; border-left:4px solid #3E6B4F; padding:11px 15px; font-size:14.5px; margin-top:8px;"><b style="color:#3E6B4F;">Discriminator:</b> chooses (a) → memo v1's B2B model revives with real WTP evidence. Chooses (b) → hybrid confirmed. Chooses neither → hotels drop out of the model entirely and Model A stands alone.</div>
+    </div>
+
+    <div style="background:#FFFFFF; border:1px solid #E4DBC9; margin:16px 0; padding:22px 24px;">
+      <h3 style="font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:.1em; text-transform:uppercase; color:#0C1C26; margin:0 0 6px;">Track D · Dispatcher / cooperative / LGU tourism office</h3>
+      <div style="font-size:14.5px; color:#6D7A80; font-style:italic; margin-bottom:14px;">Objective: map the political economy of pier access. Decides: partner-the-co-op vs. route-around design (the latter has a documented failure precedent).</div>
+      <ol style="margin:0 0 12px 22px; font-size:15.5px; line-height:1.55;">
+        <li style="margin-bottom:7px;">How does the queue/rotation work — who decides which boat gets which customers?</li>
+        <li style="margin-bottom:7px;">What problems land on your desk: complaints, refunds, no-shows, safety? What tools do you have?</li>
+        <li style="margin-bottom:7px;">Klook and the big tour companies already sell tours online. How does the co-op see them — threat, irrelevant, partner?</li>
+        <li style="margin-bottom:7px;">If online bookings arrived pre-paid and were assigned <em>through your rotation</em>, with the co-op taking a coordination fee — interesting or insulting?</li>
+        <li style="margin-bottom:7px;">What happened when outside operators or platforms tried to enter before? (Probe for Caticlan-type episodes.)</li>
+        <li style="margin-bottom:0;">What would the LGU require of a platform: accreditation, fees, data sharing on manifests?</li>
+      </ol>
+      <div style="background:#F6E9E4; border-left:4px solid #9A3324; padding:11px 15px; font-size:14.5px; margin-top:10px;"><b style="color:#9A3324;">Idea-killing answer:</b> "Bookings go through the rotation, period. Anything else gets blocked at the pier — it's happened before."</div>
+      <div style="background:#EBF1E7; border-left:4px solid #3E6B4F; padding:11px 15px; font-size:14.5px; margin-top:8px;"><b style="color:#3E6B4F;">Discriminator:</b> openness to rotation-integrated bookings converts the gatekeeper into infrastructure; hard refusal means pilot corridors must be selected by co-op posture, not tourist volume.</div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 5 ============ -->
+  <section id="s5" data-screen-label="Section 05" style="margin-top:76px;">
+    <header style="display:flex; align-items:flex-end; gap:22px; border-bottom:2px solid #162A34; padding-bottom:16px; margin-bottom:28px;">
+      <div style="font-family:'Libre Caslon Display',serif; font-size:66px; line-height:.78; color:#C24A28;">05</div>
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#6D7A80;">Section 05</div>
+        <h2 style="font-family:'Libre Caslon Display',serif; font-weight:400; font-size:clamp(26px,3.4vw,36px); line-height:1.05; color:#162A34; margin:6px 0 0;">Economics concepts</h2>
+      </div>
+    </header>
+    <p style="max-width:78ch; margin:0 0 20px;">Each concept below is load-bearing: remove it and a specific design choice in Section 6 loses its justification. Concepts marked with the course list (public good · factor of production · information asymmetry · externality · monopoly) hit Prof. Suri's named criteria directly.</p>
+
+    <div style="background:#FFFFFF; border:1px solid #E4DBC9; border-left:5px solid #B8862F; padding:20px 24px; margin:14px 0;">
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:#C24A28; margin-bottom:4px;">Course concept · Information asymmetry</div>
+      <h4 style="font-family:'Libre Caslon Display',serif; font-weight:400; font-size:21px; color:#162A34; margin:0 0 8px;">A lemons market the state accidentally guaranteed</h4>
+      <p style="font-size:15.5px; margin:0;">Akerlof's mechanism, verbatim: buyers cannot distinguish safe boats from unsafe ones, so they will not pay a safety premium; sellers of safe boats (who bear real compliance costs — licenses, insurance, FRP hulls) cannot capture that premium and under-invest; quality exits the market. The Philippine twist is that the quality signal <em>exists in law</em> — CPC, captain's license, compulsory insurance — but EO 305's devolution of &lt;3GT registration to hundreds of LGUs made it unreadable. The platform's product is signal restoration: verification converts a pooling equilibrium into a separating one, where certified boats visibly earn charter-rate demand. Adverse selection prediction to test in Track B: currently, do compliant and non-compliant boatmen earn the same rates?</p>
+    </div>
+
+    <div style="background:#FFFFFF; border:1px solid #E4DBC9; border-left:5px solid #B8862F; padding:20px 24px; margin:14px 0;">
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:#C24A28; margin-bottom:4px;">Course concept · Externality</div>
+      <h4 style="font-family:'Libre Caslon Display',serif; font-weight:400; font-size:21px; color:#162A34; margin:0 0 8px;">Safety and congestion externalities, one internalized by us, one by the LGU</h4>
+      <p style="font-size:15.5px; margin:0;">An unverified operator imposes expected-fatality costs on passengers and reputational costs on the whole corridor (one capsizing headline suppresses demand for every boat in El Nido) — a negative externality individual operators don't price. Verification plus platform insurance internalizes it: the operator's compliance now directly determines his booking volume. Contrast with the LGU's own instrument for the <em>congestion</em> externality — Big Lagoon daily visitor caps — a quantity regulation (quota) we must operate within, not around. Positive externality on the flip side: each verified boat added increases the value of the network to every buyer (indirect network effects), the standard two-sided-market argument for why this market under-provides matching without a platform.</p>
+    </div>
+
+    <div style="background:#FFFFFF; border:1px solid #E4DBC9; border-left:5px solid #B8862F; padding:20px 24px; margin:14px 0;">
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:#C24A28; margin-bottom:4px;">Course concept · Monopoly / market power</div>
+      <h4 style="font-family:'Libre Caslon Display',serif; font-weight:400; font-size:21px; color:#162A34; margin:0 0 8px;">Route-level monopoly is written into Philippine law</h4>
+      <p style="font-size:15.5px; margin:0;">Sea routes are natural monopolies at low density: one vessel's fixed cost against thin demand means duopoly is unprofitable. RA 9295's IRR Section 13 explicitly regulates rates on "monopolized routes" — the regulator concedes the market structure. Two further monopoly structures in our corridors: (i) beach cooperatives are labor-side monopolies over pier access (Caticlan coop blocking Montenegro Lines = entry deterrence in action); (ii) the El Nido LGU's uniform-price mandate on standard tours is a <em>legal price-fixing regime</em> — a state-run cartel price that eliminates Bertrand competition on standardized tours and shifts all competition to quality. Strategy consequence: on price-fixed group tours we have no lever; on unregulated charters, price is free and quality certification is the differentiator.</p>
+    </div>
+
+    <div style="background:#FFFFFF; border:1px solid #E4DBC9; border-left:5px solid #B8862F; padding:20px 24px; margin:14px 0;">
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:#C24A28; margin-bottom:4px;">Course concept · Factor of production</div>
+      <h4 style="font-family:'Libre Caslon Display',serif; font-weight:400; font-size:21px; color:#162A34; margin:0 0 8px;">Capital shock in the fishing-boat economy</h4>
+      <p style="font-size:15.5px; margin:0;">The bangka is the boatman's entire capital stock. MC 2016-02's wooden-hull phase-out mandates replacing a depreciated wooden asset with a ₱5–8M fiberglass hull — a capital requirement of roughly 10–20× annual owner earnings, with no collateralizable cash-flow history because the business is cash-based. Classic credit rationing under asymmetric information (the boatman can't prove his income). Platform booking history is exactly the missing signal: verified revenue data makes the boat financeable. This is the second-stage wedge and it deliberately rhymes with Walmy's alternative-data-lending thesis — the platform generates the alternative data.</p>
+    </div>
+
+    <div style="background:#FFFFFF; border:1px solid #E4DBC9; border-left:5px solid #B8862F; padding:20px 24px; margin:14px 0;">
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:#C24A28; margin-bottom:4px;">Course concept · Public good (and why we mostly don't claim it)</div>
+      <h4 style="font-family:'Libre Caslon Display',serif; font-weight:400; font-size:21px; color:#162A34; margin:0 0 8px;">Manifests and safety data</h4>
+      <p style="font-size:15.5px; margin:0;">Honest scoring, per our own earlier calibration: the core service is excludable and rival — not a public good. The defensible sliver: standardized e-manifests and incident data shared with the Coast Guard are non-rival safety information that improves rescue response for everyone (SEAS's own justification). We claim public-good characteristics for the <em>data layer only</em>, and say so — over-claiming here costs credibility with a grader who checks definitions.</p>
+    </div>
+
+    <div style="background:#FFFFFF; border:1px solid #E4DBC9; border-left:5px solid #B8862F; padding:20px 24px; margin:14px 0;">
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:#C24A28; margin-bottom:4px;">Pricing · 2nd &amp; 3rd degree discrimination, two-part tariffs</div>
+      <h4 style="font-family:'Libre Caslon Display',serif; font-weight:400; font-size:21px; color:#162A34; margin:0 0 8px;">Charge the gradient the price ladder reveals</h4>
+      <p style="font-size:15.5px; margin:0;">Third-degree: tourists vs. residents differ in elasticity by an order of magnitude (₱38,000 charters vs. ₱100 hops); we price the inelastic segment and exempt the elastic one — which is simultaneously the welfare/equity argument. Second-degree (versioning/menu): group seat → private outrigger → speedboat → multi-day expedition is a self-selection menu; buyers reveal WTP by choosing, no identification needed. Two-part tariff, held in reserve: if Track C answers "pay," hotels get subscription (access) + per-booking fee (usage) — the textbook structure when a buyer's demand is recurring and the marginal booking is cheap to serve.</p>
+    </div>
+
+    <div style="background:#FFFFFF; border:1px solid #E4DBC9; border-left:5px solid #2F6C7B; padding:20px 24px; margin:14px 0;">
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:#C24A28; margin-bottom:4px;">Transaction costs &amp; incomplete markets</div>
+      <h4 style="font-family:'Libre Caslon Display',serif; font-weight:400; font-size:21px; color:#162A34; margin:0 0 8px;">Why the trade doesn't happen today</h4>
+      <p style="font-size:15.5px; margin:0;">Coase: the tourist-boatman trade at charter rates fails on search costs (he's invisible online), bargaining costs (language, no posted prices), and enforcement costs (no recourse on no-show; no refund machinery on no-sail days). The market that's missing isn't boats — it's <em>contracts</em>: enforceable, weather-contingent, insured passage agreements. Escrow + standardized cancellation terms are the contract technology. The measurable welfare claim: trades with positive surplus (tourist WTP $200 &gt; boatman WTA $120) that currently die on transaction costs now execute; the platform's take is bounded by the transaction cost it eliminates.</p>
+    </div>
+
+    <div style="background:#FFFFFF; border:1px solid #E4DBC9; border-left:5px solid #2F6C7B; padding:20px 24px; margin:14px 0;">
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:#C24A28; margin-bottom:4px;">Game theory</div>
+      <h4 style="font-family:'Libre Caslon Display',serif; font-weight:400; font-size:21px; color:#162A34; margin:0 0 8px;">Disintermediation as a repeated game; entry as a coordination game</h4>
+      <p style="font-size:15.5px; margin:0;">Boatman-platform bypass: one-shot logic says defect (take the direct booking, save 15%). Escrow + platform-only insurance + booking-history-as-collateral convert it to a repeated game where defection forfeits the future stream (prepaid demand, financing eligibility) for a one-time 15% — cooperation becomes subgame-optimal without exclusivity contracts we couldn't enforce anyway. Hotel bypass (if Track C says "refer"): tourists are one-shot players, so the leak is small by construction. Co-op entry game: routing bookings through the rotation with a coordination fee changes the co-op's payoff from "blockade" (Caticlan equilibrium) to "toll collector" — we buy the gate rather than storm it. Incumbent response: Klook's rational reaction to a niche verification layer is acquisition or ignoring, not a price war on a segment they can't onboard.</p>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 6 ============ -->
+  <section id="s6" data-screen-label="Section 06" style="margin-top:76px;">
+    <header style="display:flex; align-items:flex-end; gap:22px; border-bottom:2px solid #162A34; padding-bottom:16px; margin-bottom:28px;">
+      <div style="font-family:'Libre Caslon Display',serif; font-size:66px; line-height:.78; color:#C24A28;">06</div>
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#6D7A80;">Section 06</div>
+        <h2 style="font-family:'Libre Caslon Display',serif; font-weight:400; font-size:clamp(26px,3.4vw,36px); line-height:1.05; color:#162A34; margin:6px 0 0;">Business model — with the economics doing the work</h2>
+      </div>
+    </header>
+
+    <div style="background:#0C1C26; color:#EFE6D3; padding:24px 30px; border-left:4px solid #B8862F; margin:6px 0 22px; font-size:18px; line-height:1.5;"><strong style="color:#E6BE73; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.18em; text-transform:uppercase; display:block; margin-bottom:8px;">Model (working hypothesis)</strong>a verified marketplace for private bangka charters, premium transfers, and expeditions in Northern Palawan. Tourists pay; boatmen are the supply; hotels are an affiliate channel (pending Track C); the co-op is a paid coordination partner (pending Track D). Escrow, per-trip insurance, and automated weather refunds are the product — the booking form is just the wrapper.</div>
+  </section>
+
+  <!-- FIGURE 2 (centerpiece) -->
+  <figure style="position:relative; left:50%; transform:translateX(-50%); width:100vw; margin:20px 0 44px; padding:0;">
+    <div style="background:#0A1A24; background-image:repeating-linear-gradient(0deg, rgba(184,134,47,.05) 0 1px, transparent 1px 46px), repeating-linear-gradient(90deg, rgba(184,134,47,.045) 0 1px, transparent 1px 46px); padding:48px 32px 40px;">
+      <div style="max-width:1120px; margin:0 auto;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#C9A24B; margin-bottom:6px;">Figure 02 · Model structure</div>
+        <h3 style="font-family:'Libre Caslon Display',serif; font-weight:400; font-size:clamp(22px,2.8vw,30px); color:#EFE6D3; margin:0 0 26px;">Who pays whom, and what is still an open question</h3>
+        <svg viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Hybrid model flow diagram" style="width:100%; height:auto; display:block;">
+          <defs>
+            <marker id="ah" markerWidth="10" markerHeight="10" refX="7.5" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 Z" fill="#D9642F"/></marker>
+            <marker id="ah2" markerWidth="10" markerHeight="10" refX="7.5" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 Z" fill="#C9A24B"/></marker>
+          </defs>
+
+          <!-- arrows first (behind boxes) -->
+          <path d="M270,120 L360,150" fill="none" stroke="#D9642F" stroke-width="2.5" marker-end="url(#ah)"/>
+          <text x="283" y="118" font-family="'IBM Plex Mono',monospace" font-size="12" fill="#E79B6E">books + pays 100%</text>
+          <path d="M270,375 L360,320" fill="none" stroke="#C9A24B" stroke-width="2.5" stroke-dasharray="6 5" marker-end="url(#ah2)"/>
+          <text x="276" y="360" font-family="'IBM Plex Mono',monospace" font-size="12" fill="#D8B96B">referrals</text>
+          <path d="M640,150 L730,125" fill="none" stroke="#D9642F" stroke-width="2.5" marker-end="url(#ah)"/>
+          <text x="648" y="120" font-family="'IBM Plex Mono',monospace" font-size="12" fill="#E79B6E">demand + payout (−take)</text>
+          <path d="M730,375 L640,320" fill="none" stroke="#C9A24B" stroke-width="2.5" stroke-dasharray="6 5" marker-end="url(#ah2)"/>
+          <text x="655" y="392" font-family="'IBM Plex Mono',monospace" font-size="12" fill="#D8B96B">assignment via queue</text>
+
+          <!-- Tourists -->
+          <rect x="40" y="60" width="230" height="120" fill="#FAF6EC" stroke="#0A1A24" stroke-width="1.5"/>
+          <text x="155" y="90" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-weight="600" font-size="15" fill="#0C1C26">TOURISTS</text>
+          <text x="155" y="118" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="13" fill="#3A4A52">Pre-trip, high WTP</text>
+          <text x="155" y="140" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="13" fill="#3A4A52">AOV $150–650</text>
+          <text x="155" y="162" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="13" fill="#3A4A52">One-shot buyers</text>
+
+          <!-- Hotels -->
+          <rect x="40" y="320" width="230" height="110" fill="#FAF6EC" stroke="#8A6F2E" stroke-width="1.5" stroke-dasharray="7 5"/>
+          <text x="155" y="352" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-weight="600" font-size="15" fill="#0C1C26">HOTELS / RESORTS</text>
+          <text x="155" y="380" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="13" fill="#3A4A52">Affiliate channel (5–10%)</text>
+          <text x="155" y="402" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="13" fill="#3A4A52">Pay-vs-refer: Track C</text>
+
+          <!-- Platform -->
+          <rect x="360" y="90" width="280" height="290" fill="#0C1C26" stroke="#B8862F" stroke-width="2"/>
+          <text x="500" y="124" text-anchor="middle" font-family="'Libre Caslon Display',serif" font-size="22" fill="#E6BE73">PLATFORM</text>
+          <line x1="392" y1="140" x2="608" y2="140" stroke="#2C4653" stroke-width="1"/>
+          <text x="500" y="168" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="12.5" fill="#DCE4E8">Verification (LGU + MARINA docs)</text>
+          <text x="500" y="192" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="12.5" fill="#DCE4E8">Escrow — pay on completion</text>
+          <text x="500" y="216" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="12.5" fill="#DCE4E8">Per-trip marine insurance</text>
+          <text x="500" y="240" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="12.5" fill="#DCE4E8">Auto weather refund / rebook</text>
+          <text x="500" y="264" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="12.5" fill="#DCE4E8">WhatsApp/Viber-first ops</text>
+          <line x1="392" y1="286" x2="608" y2="286" stroke="#2C4653" stroke-width="1"/>
+          <text x="500" y="314" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="12.5" fill="#E6BE73">Take rate 15–20%</text>
+          <text x="500" y="338" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="12.5" fill="#E6BE73">Agent, not carrier (liability design)</text>
+
+          <!-- Boatmen -->
+          <rect x="730" y="60" width="230" height="150" fill="#FAF6EC" stroke="#0A1A24" stroke-width="1.5"/>
+          <text x="845" y="90" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-weight="600" font-size="15" fill="#0C1C26">BOATMEN</text>
+          <text x="845" y="118" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="13" fill="#3A4A52">2,785 single proprietors</text>
+          <text x="845" y="140" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="13" fill="#3A4A52">Verified &amp; listed free</text>
+          <text x="845" y="162" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="13" fill="#3A4A52">Paid via GCash post-trip</text>
+          <text x="845" y="184" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="13" fill="#3A4A52">Booking history → financing</text>
+
+          <!-- Coop -->
+          <rect x="730" y="320" width="230" height="110" fill="#FAF6EC" stroke="#8A6F2E" stroke-width="1.5" stroke-dasharray="7 5"/>
+          <text x="845" y="352" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-weight="600" font-size="15" fill="#0C1C26">CO-OP / DISPATCH</text>
+          <text x="845" y="380" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="13" fill="#3A4A52">Bookings via rotation</text>
+          <text x="845" y="402" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="13" fill="#3A4A52">Coordination fee: Track D</text>
+
+          <text x="500" y="470" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="12.5" fill="#7F929B">Solid = money and bookings.  Dashed = contingent on interview outcomes (Tracks C, D).</text>
+        </svg>
+        <figcaption style="font-family:'Newsreader',serif; font-size:15px; color:#AEBDC4; margin-top:20px; max-width:88ch; border-top:1px solid #21323B; padding-top:16px;"><strong style="color:#E6BE73;">Fig. 2 —</strong> Model structure. Every dashed line is an open empirical question with a named interview track, not an assumption.</figcaption>
+      </div>
+    </div>
+  </figure>
+
+  <section style="margin-top:20px;">
+    <h3 style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#162A34; margin:0 0 14px; display:flex; align-items:center; gap:11px;"><span style="width:22px; height:2px; background:#C24A28;"></span>6.1 · Revenue architecture (mapped to concepts)</h3>
+    <table style="width:100%; border-collapse:collapse; margin:8px 0 24px; font-size:15px;">
+      <tr>
+        <th style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; text-align:left; color:#6D7A80; padding:0 14px 9px; border-bottom:2px solid #162A34;">Stream</th>
+        <th style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; text-align:left; color:#6D7A80; padding:0 14px 9px; border-bottom:2px solid #162A34;">Mechanics</th>
+        <th style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; text-align:left; color:#6D7A80; padding:0 14px 9px; border-bottom:2px solid #162A34;">Economics doing the work</th>
+      </tr>
+      <tr><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">Charter commission</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">15–20% of GBV on private charters, transfers, expeditions (test in Track B)</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">3rd-degree PD: priced entirely on the inelastic tourist segment; residents untouched</td></tr>
+      <tr><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">Versioned menu</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">Outrigger → speedboat → multi-day; price gaps set for self-selection</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">2nd-degree PD / screening</td></tr>
+      <tr><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">Insurance margin</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">Per-trip marine cover bundled; small spread over premium</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">Internalizes safety externality; the on-platform retention hook</td></tr>
+      <tr><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">Hotel two-part tariff <em>(contingent)</em></td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">Subscription + per-booking fee — only if Track C answers "pay"</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">Two-part tariff on recurring institutional demand</td></tr>
+      <tr><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">Boat financing referral <em>(stage 2)</em></td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">Booking history underwrites FRP hull loans with partner lender</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">Solves credit rationing on the capital factor; deepens supply lock-in</td></tr>
+    </table>
+
+    <h3 style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#162A34; margin:36px 0 14px; display:flex; align-items:center; gap:11px;"><span style="width:22px; height:2px; background:#C24A28;"></span>6.2 · Unit economics — with honest sensitivity</h3>
+    <p style="max-width:78ch; margin:0 0 14px;">The deep-research memo's $20K/month OpEx is unrealistically low for a business doing physical verification, escrow administration, and typhoon-day mass refunds. We present the breakeven as a sensitivity, not a point estimate:</p>
+    <table style="width:100%; border-collapse:collapse; margin:8px 0 24px; font-size:15px;">
+      <tr>
+        <th style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; text-align:left; color:#6D7A80; padding:0 14px 9px; border-bottom:2px solid #162A34;">Line</th>
+        <th style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; text-align:left; color:#6D7A80; padding:0 14px 9px; border-bottom:2px solid #162A34;">Value</th>
+        <th style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; text-align:left; color:#6D7A80; padding:0 14px 9px; border-bottom:2px solid #162A34;">Basis</th>
+      </tr>
+      <tr><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">AOV (private charter)</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">$150–175 (₱8,000–10,000)</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;"><span style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.05em; padding:2px 7px; background:#E7EEE4; color:#3E6B4F; border:1px solid #C3D3BD; white-space:nowrap;">SOURCED</span> — Sea Quest/operator rate cards</td></tr>
+      <tr><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">Take rate</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">20% (vs. Klook 20–35%)</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;"><span style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.05em; padding:2px 7px; background:#F3E4DE; color:#9A3324; border:1px solid #E0C0B5; white-space:nowrap;">ESTIMATED</span> — Track B tests it</td></tr>
+      <tr><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">Variable cost</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">~7% of GBV (payments 2–3.5%, FX, support)</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;"><span style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.05em; padding:2px 7px; background:#E7EEE4; color:#3E6B4F; border:1px solid #C3D3BD; white-space:nowrap;">SOURCED</span> — PayMongo/Maya rate cards</td></tr>
+      <tr><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">Contribution margin</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">13% of GBV ≈ $20–23 per booking</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">Derived</td></tr>
+      <tr><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">Breakeven @ $20K OpEx</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">≈ 1,020 bookings/mo</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">Optimistic case</td></tr>
+      <tr><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">Breakeven @ $40K OpEx</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">≈ 2,050 bookings/mo</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">Base case (verification staff, insurance admin, disruption reserve)</td></tr>
+      <tr><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">Breakeven @ $60K OpEx</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">≈ 3,070 bookings/mo</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">Conservative</td></tr>
+      <tr><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">Reality check</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">El Nido ≈ 500K visitors/yr → ~1,370/day. Base case requires ~68 charter bookings/day ≈ 5% of visitors buying a ~4-pax charter — aggressive for one corridor; plan assumes El Nido + Coron + Siargao by month 18.</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;"><span style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.05em; padding:2px 7px; background:#F3E4DE; color:#9A3324; border:1px solid #E0C0B5; white-space:nowrap;">ESTIMATED</span></td></tr>
+    </table>
+
+    <h3 style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#162A34; margin:36px 0 14px; display:flex; align-items:center; gap:11px;"><span style="width:22px; height:2px; background:#C24A28;"></span>6.3 · Disintermediation defense (the question that killed memo v1)</h3>
+    <ul style="margin:6px 0 16px 0; padding-left:0; font-size:16px; list-style:none;">
+      <li style="margin-bottom:12px; padding-left:18px; border-left:2px solid #E4DBC9;"><strong style="color:#0C1C26;">Demand side:</strong> tourists are one-shot; leakage ≈ 0 by construction. (The reason B2C beats hotel-paid B2B on this axis.)</li>
+      <li style="margin-bottom:12px; padding-left:18px; border-left:2px solid #E4DBC9;"><strong style="color:#0C1C26;">Supply side:</strong> escrow (no upfront cash to steal), insurance valid only on-platform, contact masking pre-payment, and booking history as loan collateral — repeated-game payoffs favor staying.</li>
+      <li style="margin-bottom:0; padding-left:18px; border-left:2px solid #E4DBC9;"><strong style="color:#0C1C26;">Channel side:</strong> hotels as affiliates earn from referring; bypassing us costs them the commission <em>and</em> re-imposes the liability we absorb.</li>
+    </ul>
+
+    <h3 style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#162A34; margin:36px 0 14px; display:flex; align-items:center; gap:11px;"><span style="width:22px; height:2px; background:#C24A28;"></span>6.4 · Kill tests (carried forward, updated)</h3>
+    <table style="width:100%; border-collapse:collapse; margin:8px 0 24px; font-size:15px;">
+      <tr>
+        <th style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; text-align:left; color:#6D7A80; padding:0 14px 9px; border-bottom:2px solid #162A34; width:5%;">#</th>
+        <th style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; text-align:left; color:#6D7A80; padding:0 14px 9px; border-bottom:2px solid #162A34;">Test</th>
+        <th style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; text-align:left; color:#6D7A80; padding:0 14px 9px; border-bottom:2px solid #162A34;">Threshold</th>
+        <th style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; text-align:left; color:#6D7A80; padding:0 14px 9px; border-bottom:2px solid #162A34;">Where it's tested</th>
+      </tr>
+      <tr><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; font-family:'IBM Plex Mono',monospace; color:#C24A28;">1</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">Tourist premium WTP</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">≥10% premium acceptance for verified+insured+refundable charters among ≥60% of Track A interviews</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">Track A</td></tr>
+      <tr><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7; font-family:'IBM Plex Mono',monospace; color:#C24A28;">2</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">Supply take-rate acceptance</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">≥15% commission with escrow accepted by ≥5 of 8 boatmen</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">Track B</td></tr>
+      <tr><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; font-family:'IBM Plex Mono',monospace; color:#C24A28;">3</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">Hotel pay-vs-refer</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">Any consistent answer; "neither" from all hotels removes the channel</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">Track C</td></tr>
+      <tr><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7; font-family:'IBM Plex Mono',monospace; color:#C24A28;">4</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">Co-op posture</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">At least one pilot corridor with a co-op open to rotation-integrated bookings</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">Track D</td></tr>
+      <tr><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; font-family:'IBM Plex Mono',monospace; color:#C24A28;">5</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">Agent-not-carrier classification</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">Counsel/regulator confirms platform can avoid common-carrier status with escrow + insurance design</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top;">Legal interview</td></tr>
+      <tr><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7; font-family:'IBM Plex Mono',monospace; color:#C24A28;">6</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">Contribution &gt; disruption cost</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">Weather refund reserve modeled at regional no-sail frequency still leaves positive contribution</td><td style="padding:11px 14px; border-bottom:1px solid #E1D7C4; vertical-align:top; background:#EFE7D7;">Model + PCG data</td></tr>
+    </table>
+  </section>
+
+  <!-- ============ SECTION 7 ============ -->
+  <section id="s7" data-screen-label="Section 07" style="margin-top:76px;">
+    <header style="display:flex; align-items:flex-end; gap:22px; border-bottom:2px solid #162A34; padding-bottom:16px; margin-bottom:28px;">
+      <div style="font-family:'Libre Caslon Display',serif; font-size:66px; line-height:.78; color:#C24A28;">07</div>
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#6D7A80;">Section 07</div>
+        <h2 style="font-family:'Libre Caslon Display',serif; font-weight:400; font-size:clamp(26px,3.4vw,36px); line-height:1.05; color:#162A34; margin:6px 0 0;">Slides for the July 14 presentation</h2>
+      </div>
+    </header>
+    <p style="max-width:80ch; margin:0 0 22px;">Ten slides, one claim each, evidence on the slide. Q&amp;A traps pre-answered in the notes column of the deck: "Barkota exists" (scheduled ships only + SEAS), "Klook exists" (curated inventory only; can't onboard the long tail), "hotels will bypass you" (they're affiliates, not payers — pending Track C), "$20K OpEx is fantasy" (we show the sensitivity ourselves).</p>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+      <div style="background:#FFFFFF; border:1px solid #E4DBC9; display:grid; grid-template-columns:60px 1fr;">
+        <div style="background:#0C1C26; color:#E6BE73; display:flex; align-items:center; justify-content:center; font-family:'Libre Caslon Display',serif; font-size:26px;">1</div>
+        <div style="padding:16px 18px;">
+          <h4 style="font-family:'Libre Caslon Display',serif; font-weight:400; font-size:18px; color:#162A34; margin:0;">Title — The fleet the state cannot see</h4>
+          <div style="font-style:italic; color:#C24A28; font-size:14.5px; margin:3px 0 9px;">A verified marketplace for Philippine small-boat charters</div>
+          <ul style="margin:0 0 0 18px; font-size:14px; line-height:1.5;"><li style="margin-bottom:4px;">Team, course, date; one image: bangka at El Nido pier</li><li>Verdict line: pivot tested against data twice; presenting a hypothesis + the interviews that will kill or confirm it</li></ul>
+        </div>
+      </div>
+
+      <div style="background:#FFFFFF; border:1px solid #E4DBC9; display:grid; grid-template-columns:60px 1fr;">
+        <div style="background:#0C1C26; color:#E6BE73; display:flex; align-items:center; justify-content:center; font-family:'Libre Caslon Display',serif; font-size:26px;">2</div>
+        <div style="padding:16px 18px;">
+          <h4 style="font-family:'Libre Caslon Display',serif; font-weight:400; font-size:18px; color:#162A34; margin:0;">The problem is a market failure, not an inconvenience</h4>
+          <div style="font-style:italic; color:#C24A28; font-size:14.5px; margin:3px 0 9px;">Quality is legally defined, economically valuable, and unverifiable</div>
+          <ul style="margin:0 0 0 18px; font-size:14px; line-height:1.5;"><li style="margin-bottom:4px;">EO 305: &lt;3GT registration devolved to LGUs → no national registry</li><li style="margin-bottom:4px;">4,467 accidents 2015–20; banca capsizing = most fatal category</li><li>~20 typhoons/yr; 6,607 stranded in one storm; no refund machinery</li></ul>
+        </div>
+      </div>
+
+      <div style="background:#FFFFFF; border:1px solid #E4DBC9; display:grid; grid-template-columns:60px 1fr;">
+        <div style="background:#0C1C26; color:#E6BE73; display:flex; align-items:center; justify-content:center; font-family:'Libre Caslon Display',serif; font-size:26px;">3</div>
+        <div style="padding:16px 18px;">
+          <h4 style="font-family:'Libre Caslon Display',serif; font-weight:400; font-size:18px; color:#162A34; margin:0;">Market definition — route-level, segment-level</h4>
+          <div style="font-style:italic; color:#C24A28; font-size:14.5px; margin:3px 0 9px;">Not "the ferry market": private small-boat transfers &amp; charters in tourist corridors</div>
+          <ul style="margin:0 0 0 18px; font-size:14px; line-height:1.5;"><li style="margin-bottom:4px;">Fig. 1 price ladder: ₱100 hop → ₱38,000 charter on the same asset class</li><li style="margin-bottom:4px;">El Nido 500K + Siargao 530K arrivals (2023)</li><li>Supply: 24,483 bancas; 81% single proprietorships</li></ul>
+        </div>
+      </div>
+
+      <div style="background:#FFFFFF; border:1px solid #E4DBC9; display:grid; grid-template-columns:60px 1fr;">
+        <div style="background:#0C1C26; color:#E6BE73; display:flex; align-items:center; justify-content:center; font-family:'Libre Caslon Display',serif; font-size:26px;">4</div>
+        <div style="padding:16px 18px;">
+          <h4 style="font-family:'Libre Caslon Display',serif; font-weight:400; font-size:18px; color:#162A34; margin:0;">Why now — the regulator just drew our market boundary</h4>
+          <div style="font-style:italic; color:#C24A28; font-size:14.5px; margin:3px 0 9px;">SEAS (MC DS-2026-01) digitizes big ships and exempts bancas</div>
+          <ul style="margin:0 0 0 18px; font-size:14px; line-height:1.5;"><li style="margin-bottom:4px;">Scheduled segment: state-mandated e-ticketing, Barkota entrenched → we exit</li><li style="margin-bottom:4px;">Exempt segment: last un-digitized layer, ours to verify</li><li>RA 11659: 100% foreign ownership now legal → investable</li></ul>
+        </div>
+      </div>
+
+      <div style="background:#FFFFFF; border:1px solid #E4DBC9; display:grid; grid-template-columns:60px 1fr;">
+        <div style="background:#0C1C26; color:#E6BE73; display:flex; align-items:center; justify-content:center; font-family:'Libre Caslon Display',serif; font-size:26px;">5</div>
+        <div style="padding:16px 18px;">
+          <h4 style="font-family:'Libre Caslon Display',serif; font-weight:400; font-size:18px; color:#162A34; margin:0;">Competition — the gap is supply, not demand</h4>
+          <div style="font-style:italic; color:#C24A28; font-size:14.5px; margin:3px 0 9px;">OTAs sell curated charters; 2,785 single-proprietor boatmen are invisible</div>
+          <ul style="margin:0 0 0 18px; font-size:14px; line-height:1.5;"><li style="margin-bottom:4px;">Map: Barkota/Tripket (scheduled) · Klook/GYG (curated tours, 20–35% take) · integrated locals (own boats) · beach cash (everything else)</li><li>Failure precedents: Biyaheroes (thin fares), Tripsta (no disruption reserves)</li></ul>
+        </div>
+      </div>
+
+      <div style="background:#FFFFFF; border:1px solid #E4DBC9; display:grid; grid-template-columns:60px 1fr;">
+        <div style="background:#0C1C26; color:#E6BE73; display:flex; align-items:center; justify-content:center; font-family:'Libre Caslon Display',serif; font-size:26px;">6</div>
+        <div style="padding:16px 18px;">
+          <h4 style="font-family:'Libre Caslon Display',serif; font-weight:400; font-size:18px; color:#162A34; margin:0;">The model</h4>
+          <div style="font-style:italic; color:#C24A28; font-size:14.5px; margin:3px 0 9px;">Escrow, insurance, and weather refunds are the product; booking is the wrapper</div>
+          <ul style="margin:0 0 0 18px; font-size:14px; line-height:1.5;"><li style="margin-bottom:4px;">Fig. 2 flow diagram; take 15–20% on charters only</li><li style="margin-bottom:4px;">Hotels = affiliates (dashed, pending interviews); co-op = paid coordination partner (dashed)</li><li>Agent-not-carrier liability architecture</li></ul>
+        </div>
+      </div>
+
+      <div style="background:#FFFFFF; border:1px solid #E4DBC9; display:grid; grid-template-columns:60px 1fr;">
+        <div style="background:#0C1C26; color:#E6BE73; display:flex; align-items:center; justify-content:center; font-family:'Libre Caslon Display',serif; font-size:26px;">7</div>
+        <div style="padding:16px 18px;">
+          <h4 style="font-family:'Libre Caslon Display',serif; font-weight:400; font-size:18px; color:#162A34; margin:0;">Economics I — asymmetric information &amp; externalities</h4>
+          <div style="font-style:italic; color:#C24A28; font-size:14.5px; margin:3px 0 9px;">A lemons market where the state built the signal and lost the reader</div>
+          <ul style="margin:0 0 0 18px; font-size:14px; line-height:1.5;"><li style="margin-bottom:4px;">Akerlof separating equilibrium via verification</li><li style="margin-bottom:4px;">Safety externality internalized by insurance; congestion handled by LGU quotas (Big Lagoon caps)</li><li>Public-good claim limited honestly to the manifest/safety data layer</li></ul>
+        </div>
+      </div>
+
+      <div style="background:#FFFFFF; border:1px solid #E4DBC9; display:grid; grid-template-columns:60px 1fr;">
+        <div style="background:#0C1C26; color:#E6BE73; display:flex; align-items:center; justify-content:center; font-family:'Libre Caslon Display',serif; font-size:26px;">8</div>
+        <div style="padding:16px 18px;">
+          <h4 style="font-family:'Libre Caslon Display',serif; font-weight:400; font-size:18px; color:#162A34; margin:0;">Economics II — monopoly, pricing, game theory</h4>
+          <div style="font-style:italic; color:#C24A28; font-size:14.5px; margin:3px 0 9px;">Route-level monopoly is in the statute; the LGU runs a legal cartel on tour prices</div>
+          <ul style="margin:0 0 0 18px; font-size:14px; line-height:1.5;"><li style="margin-bottom:4px;">RA 9295 IRR §13 regulates monopolized-route rates; El Nido uniform-price mandate kills Bertrand on group tours → we monetize unregulated charters</li><li style="margin-bottom:4px;">3rd-degree PD (tourists, not residents) + versioned menu (2nd-degree)</li><li>Disintermediation as repeated game: escrow + insurance + financing flip the payoffs</li></ul>
+        </div>
+      </div>
+
+      <div style="background:#FFFFFF; border:1px solid #E4DBC9; display:grid; grid-template-columns:60px 1fr;">
+        <div style="background:#0C1C26; color:#E6BE73; display:flex; align-items:center; justify-content:center; font-family:'Libre Caslon Display',serif; font-size:26px;">9</div>
+        <div style="padding:16px 18px;">
+          <h4 style="font-family:'Libre Caslon Display',serif; font-weight:400; font-size:18px; color:#162A34; margin:0;">Unit economics — shown as a sensitivity, not a promise</h4>
+          <div style="font-style:italic; color:#C24A28; font-size:14.5px; margin:3px 0 9px;">13% contribution margin; breakeven 1,020–3,070 bookings/mo depending on OpEx</div>
+          <ul style="margin:0 0 0 18px; font-size:14px; line-height:1.5;"><li style="margin-bottom:4px;">AOV $150–175 sourced from operator rate cards; take rate is a hypothesis Track B tests</li><li style="margin-bottom:4px;">Base case needs 3 corridors, not 1 — stated plainly</li><li>Welfare slide-note: surplus from trades transaction costs currently kill; zero take on resident mobility</li></ul>
+        </div>
+      </div>
+
+      <div style="background:#FFFFFF; border:1px solid #E4DBC9; display:grid; grid-template-columns:60px 1fr;">
+        <div style="background:#0C1C26; color:#E6BE73; display:flex; align-items:center; justify-content:center; font-family:'Libre Caslon Display',serif; font-size:26px;">10</div>
+        <div style="padding:16px 18px;">
+          <h4 style="font-family:'Libre Caslon Display',serif; font-weight:400; font-size:18px; color:#162A34; margin:0;">Kill tests &amp; this week's interviews</h4>
+          <div style="font-style:italic; color:#C24A28; font-size:14.5px; margin:3px 0 9px;">Four tracks, four discriminators — the model resolves itself in the data</div>
+          <ul style="margin:0 0 0 18px; font-size:14px; line-height:1.5;"><li style="margin-bottom:4px;">Tourist premium ≥10% · boatman take ≥15% w/ escrow · hotel pay-vs-refer · co-op rotation integration</li><li>Ask to the class/prof: is agent-vs-carrier the right legal test, and what would change your mind on the take rate?</li></ul>
+        </div>
+      </div>
+    </div>
+
+    <div style="font-size:12.5px; color:#6D7A80; line-height:1.55; border-top:1px solid #D9CFBD; margin-top:40px; padding-top:16px; max-width:none;">
+      Source base: MARINA MC DS-2026-01 and press (marina.gov.ph, Manila Times, Manila Bulletin, BusinessMirror, Malaya); MARINA Statistical Reports 2019/2023/2024; RA 9295 Revised IRR; RA 11659 analyses (NDV Law, Baker McKenzie); EO 305; MC 2016-02 + PNA/Guimaras LGU coverage; MDPI spatial study of maritime disasters (PCG data 2015–2020); PCG stranding reports via Inquirer/PNA; PPA via PortCalls/PNA; PIA/PSA/DOT tourism statistics; operator rate cards (Sea Quest El Nido, Seatours Palawan, El Nido Paradise, Discover El Nido, Hello El Nido — incl. the LGU uniform-price mandate); Barkota/Tripket/Klook/12Go/KKday/GetMyBoat public pages; Caticlan cooperative–Montenegro episode (Aklan Forum); Biyaheroes (Tracxn) and Tripsta (PhocusWire) failure coverage; PayMongo/Maya fee schedules. Figures tagged ESTIMATED must be re-verified or caveated before submission.
+    </div>
+  </section>
+
+  </main>
+</div>
+</x-dc>
+</body>
+</html>

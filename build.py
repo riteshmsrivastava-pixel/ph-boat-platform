@@ -9,7 +9,7 @@ Em-dashes are stripped everywhere (standing user preference).
 """
 import re, os, html
 
-SRC = os.path.expanduser("~/Downloads/design-extract/design-improvement-request/project/PH_Boat_Platform_Project_Pack.dc.html")
+SRC = os.path.expanduser("~/ph-boat-platform/design-source.dc.html")
 OUT = os.path.expanduser("~/ph-boat-platform")
 os.makedirs(OUT, exist_ok=True)
 
