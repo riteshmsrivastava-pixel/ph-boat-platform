@@ -6,12 +6,15 @@ inline bold/italic, lists). Figures (SVG) become a placeholder pointing at the s
 Team edits this doc in Google Docs; the site stays the presentation layer and is
 re-synced on request.
 """
-import re, os, html
+import re, os, html, sys
 from html.parser import HTMLParser
 from docx import Document
 from docx.shared import Pt, RGBColor
 from docx.oxml.ns import qn
 from docx.oxml import OxmlElement
+
+sys.path.insert(0, os.path.expanduser("~/ph-boat-platform"))
+import refs  # shared reference list
 
 SRC = os.path.expanduser("~/ph-boat-platform/design-source.dc.html")
 OUT = os.path.expanduser("~/Desktop/PH-Boat-Pack-EDITABLE.docx")
@@ -222,8 +225,29 @@ for sid, num, name in PAGES:
                     render_block(c)
         elif node.tag == "figure":
             render_block(node)
-    if sid != "s7":
-        doc.add_page_break()
+    doc.add_page_break()
+
+# ---- references (clickable) ----
+def add_hyperlink(paragraph, url, text):
+    r_id = paragraph.part.relate_to(
+        url, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink",
+        is_external=True)
+    link = OxmlElement("w:hyperlink"); link.set(qn("r:id"), r_id)
+    run = OxmlElement("w:r"); rPr = OxmlElement("w:rPr")
+    col = OxmlElement("w:color"); col.set(qn("w:val"), "C24A28"); rPr.append(col)
+    u = OxmlElement("w:u"); u.set(qn("w:val"), "single"); rPr.append(u)
+    run.append(rPr)
+    t = OxmlElement("w:t"); t.text = text; run.append(t)
+    link.append(run); paragraph._p.append(link)
+
+doc.add_heading("References & sources", level=1)
+doc.add_paragraph(
+    "Every figure in the tables above traces to one of these primary or reputable secondary "
+    "sources (click to open). Items tagged ESTIMATED are derived and not directly citable."
+).runs[0].italic = True
+for i, (k, label, url) in enumerate(refs.REFS, 1):
+    p = doc.add_paragraph(style="List Number")
+    add_hyperlink(p, url, label)
 
 doc.save(OUT)
-print("saved", OUT)
+print("saved", OUT, "| refs:", len(refs.REFS))

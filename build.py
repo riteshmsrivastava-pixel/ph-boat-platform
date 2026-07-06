@@ -7,7 +7,10 @@ nav, prev/next, and a redesigned landing page. Section body markup is kept verba
 from the design (inline styles) for pixel fidelity; only the page chrome is class-based.
 Em-dashes are stripped everywhere (standing user preference).
 """
-import re, os, html
+import re, os, html, sys
+
+sys.path.insert(0, os.path.expanduser("~/ph-boat-platform"))
+import refs  # shared reference list (labels + URLs)
 
 SRC = os.path.expanduser("~/ph-boat-platform/design-source.dc.html")
 OUT = os.path.expanduser("~/ph-boat-platform")
@@ -103,8 +106,26 @@ PAGE = '''<!DOCTYPE html>
 </html>
 '''
 
+def refs_block(sid):
+    keys = refs.PAGE_REFS.get(sid)
+    if not keys:
+        return ""
+    items = "".join(
+        f'<li style="margin-bottom:6px;"><a href="{refs.LUT[k][1]}" target="_blank" rel="noopener" '
+        f'style="text-decoration:underline;">{html.escape(refs.LUT[k][0])}</a></li>'
+        for k in keys)
+    return (
+        '<section style="margin-top:56px;">'
+        '<h3 style="font-family:\'IBM Plex Mono\',monospace; font-size:12px; letter-spacing:.14em; '
+        'text-transform:uppercase; color:#162A34; margin:0 0 14px; display:flex; align-items:center; gap:11px;">'
+        '<span style="width:22px; height:2px; background:#C24A28;"></span>References &amp; sources</h3>'
+        f'<ol style="margin:0; padding-left:22px; font-size:13.5px; line-height:1.5; color:#3A4A52;">{items}</ol>'
+        '<p style="font-size:12px; color:#6D7A80; margin:10px 0 0; max-width:80ch;">Figures and charts on this '
+        'page trace to these primary or reputable secondary sources. Items tagged ESTIMATED are derived and not '
+        'directly citable.</p></section>')
+
 for idx, (sid, fn, label, num, blurb) in enumerate(PAGES):
-    content = "\n".join(page_blocks[sid])
+    content = "\n".join(page_blocks[sid]) + "\n" + refs_block(sid)
     title = h2_of(page_blocks[sid][0]) or label
     page = PAGE.format(title=html.escape(title), fonts=FONTS, masthead=MASTHEAD,
                        nav=nav(fn), content=content, pagenav=pagenav(idx))
