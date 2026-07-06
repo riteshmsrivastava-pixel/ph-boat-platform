@@ -7,6 +7,11 @@ os.makedirs(OUT, exist_ok=True)
 
 src = open(SRC, encoding="utf-8").read()
 
+# Never emit em-dashes: replace each (with surrounding spaces/tabs, not newlines)
+# with a spaced hyphen. Applied to every file just before writing.
+def desh(s):
+    return re.sub(r"[ \t]*—[ \t]*", " - ", s)
+
 # --- extract the main <style> block from <head> ---
 style = re.search(r"<style>(.*?)</style>", src, re.S).group(1)
 
@@ -21,7 +26,7 @@ sec_map = {sid: body for sid, body in sections}
 PAGES = [
     ("s1", "problem.html",         "1 · Problem",           "The market failure we picked and the alternatives we rejected."),
     ("s2", "research.html",        "2 · Research & Data",   "Every figure tagged sourced or estimated: market, supply, prices, competition, regulation, pain."),
-    ("s3", "personas.html",        "3 · Personas",          "Five actors — demand, supply, channel, gatekeeper — each mapped to an interview track."),
+    ("s3", "personas.html",        "3 · Personas",          "Five actors - demand, supply, channel, gatekeeper - each mapped to an interview track."),
     ("s4", "interview-guide.html", "4 · Interview Guide",   "Four 20-minute tracks with objectives, questions, kill answers, and discriminators."),
     ("s5", "econ-concepts.html",   "5 · Econ Concepts",     "Eight load-bearing course concepts, from lemons markets to repeated-game disintermediation."),
     ("s6", "business-model.html",  "6 · Business Model",    "The hybrid model, revenue architecture, unit-economics sensitivity, and kill tests."),
@@ -92,7 +97,7 @@ for idx, (sid, fn, label, blurb) in enumerate(PAGES):
         body=body,
         pagenav=pagenav(idx),
     )
-    open(os.path.join(OUT, fn), "w", encoding="utf-8").write(page)
+    open(os.path.join(OUT, fn), "w", encoding="utf-8").write(desh(page))
     print("wrote", fn)
 
 # --- home page ---
@@ -115,7 +120,7 @@ home = f'''<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Philippine Small-Boat Platform — 15.024 Project Pack</title>
+<title>Philippine Small-Boat Platform - 15.024 Project Pack</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -126,13 +131,13 @@ home = f'''<!DOCTYPE html>
 {chr(10).join(cards)}
   </div>
   <div class="footnote" style="margin-top:56px">
-    A 15.024 Applied Economics for Managers team project pack. Each section is its own page — use the navigation bar or the cards above. Status: working hypothesis to be tested in this week's interviews, not a settled conclusion.
+    A 15.024 Applied Economics for Managers team project pack. Each section is its own page - use the navigation bar or the cards above. Status: working hypothesis to be tested in this week's interviews, not a settled conclusion.
   </div>
 </main>
 </body>
 </html>
 '''
-open(os.path.join(OUT, "index.html"), "w", encoding="utf-8").write(home)
+open(os.path.join(OUT, "index.html"), "w", encoding="utf-8").write(desh(home))
 print("wrote index.html")
 
 # --- extra CSS appended to shared stylesheet ---
@@ -163,7 +168,7 @@ nav.toc a.active{color:#fff;border-bottom-color:var(--rust);}
 .pn b{color:var(--navy);font-size:15px;margin-top:2px;}
 @media(max-width:600px){.pn{min-width:100%;}}
 '''
-open(os.path.join(OUT, "style.css"), "w", encoding="utf-8").write(style + extra_css)
+open(os.path.join(OUT, "style.css"), "w", encoding="utf-8").write(desh(style + extra_css))
 print("wrote style.css")
 print("DONE ->", OUT)
 '''
