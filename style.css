@@ -28,6 +28,10 @@ nav.toc a.active{color:#FFFFFF; border-bottom-color:#C24A28;}
 /* main column (matches design) */
 main{max-width:1080px; margin:0 auto; padding:0 32px 110px;}
 
+/* reference list: highlight the item a footnote marker jumps to */
+li:target{background:#F6E4D9; box-shadow:0 0 0 4px #F6E4D9;}
+sup a{color:#C24A28;}
+
 /* prev / next */
 .pagenav{display:flex; justify-content:space-between; gap:14px; margin-top:72px; border-top:1px solid #D9CFBD; padding-top:22px; flex-wrap:wrap;}
 .pn{display:flex; flex-direction:column; text-decoration:none; padding:14px 20px; background:#FFFFFF; border:1px solid #E4DBC9; min-width:220px; flex:1; transition:border-color .12s ease, transform .12s ease;}

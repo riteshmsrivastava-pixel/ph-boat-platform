@@ -106,14 +106,32 @@ PAGE = '''<!DOCTYPE html>
 </html>
 '''
 
+def cite_markers(sid, content):
+    """Insert superscript footnote markers after each configured anchor (first match)."""
+    keys = refs.PAGE_REFS.get(sid) or []
+    num = {k: i + 1 for i, k in enumerate(keys)}
+    for csid, anchor, key in refs.CITES:
+        if csid != sid or key not in num:
+            continue
+        pos = content.find(anchor)
+        if pos == -1:
+            continue
+        end = pos + len(anchor)
+        n = num[key]
+        sup = (f'<sup style="font-size:.68em; line-height:0; font-weight:600;">'
+               f'<a href="#{sid}-ref-{n}" style="text-decoration:none;">{n}</a></sup>')
+        content = content[:end] + sup + content[end:]
+    return content
+
 def refs_block(sid):
     keys = refs.PAGE_REFS.get(sid)
     if not keys:
         return ""
     items = "".join(
-        f'<li style="margin-bottom:6px;"><a href="{refs.LUT[k][1]}" target="_blank" rel="noopener" '
+        f'<li id="{sid}-ref-{i}" style="margin-bottom:6px; scroll-margin-top:72px;">'
+        f'<a href="{refs.LUT[k][1]}" target="_blank" rel="noopener" '
         f'style="text-decoration:underline;">{html.escape(refs.LUT[k][0])}</a></li>'
-        for k in keys)
+        for i, k in enumerate(keys, 1))
     return (
         '<section style="margin-top:56px;">'
         '<h3 style="font-family:\'IBM Plex Mono\',monospace; font-size:12px; letter-spacing:.14em; '
@@ -125,7 +143,7 @@ def refs_block(sid):
         'directly citable.</p></section>')
 
 for idx, (sid, fn, label, num, blurb) in enumerate(PAGES):
-    content = "\n".join(page_blocks[sid]) + "\n" + refs_block(sid)
+    content = cite_markers(sid, "\n".join(page_blocks[sid])) + "\n" + refs_block(sid)
     title = h2_of(page_blocks[sid][0]) or label
     page = PAGE.format(title=html.escape(title), fonts=FONTS, masthead=MASTHEAD,
                        nav=nav(fn), content=content, pagenav=pagenav(idx))
@@ -210,6 +228,10 @@ nav.toc a.active{color:#FFFFFF; border-bottom-color:#C24A28;}
 
 /* main column (matches design) */
 main{max-width:1080px; margin:0 auto; padding:0 32px 110px;}
+
+/* reference list: highlight the item a footnote marker jumps to */
+li:target{background:#F6E4D9; box-shadow:0 0 0 4px #F6E4D9;}
+sup a{color:#C24A28;}
 
 /* prev / next */
 .pagenav{display:flex; justify-content:space-between; gap:14px; margin-top:72px; border-top:1px solid #D9CFBD; padding-top:22px; flex-wrap:wrap;}
